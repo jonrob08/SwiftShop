@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-283618: #283618;
+}
+
 body {
   font-family: 'Mingzat', sans-serif;
   font-family: 'Rubik', sans-serif;
@@ -12,4 +16,10 @@ body {
 a {
   text-decoration: none;
   display: inline-block;
+}
+
+/* Header */
+
+.header-top-strip {
+  background-color: var(--color-283618);
 }
