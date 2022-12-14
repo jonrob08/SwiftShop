@@ -5,7 +5,11 @@
 }
 
 :root {
-  --color-283618: #283618;
+  --color-primary: #283618;
+  --color-secondary: #606C38;
+  --color-tertiary: #FEFAE0;
+  --color-quaternary: #DDA15E;
+  --color-quinary: #BC6C25;
 }
 
 body {
@@ -18,8 +22,32 @@ a {
   display: inline-block;
 }
 
+.form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
 /* Header */
 
 .header-top-strip {
-  background-color: var(--color-283618);
+  border-bottom: 1px solid var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.header-upper {
+  border-bottom: 1px solid var(--color-secondary);
+  background-color: var(--color-secondary);
+}
+
+.header-upper .input-group-addon {
+  background-color: var(--color-quaternary);
+  padding: 5px;
 }
