@@ -51,9 +51,8 @@ a {
   background-color: var(--color-primary);
 }
 
-.header-upper .input-group-addon {
+.header-upper .input-group-text {
   background-color: var(--color-quaternary);
-  padding: 5px;
 }
 
 .header-bottom {
@@ -93,4 +92,25 @@ a {
 .header-bottom .dropdown-item:hover {
   background-color: var(--color-secondary);
   color: var(--color-quinary) !important;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--color-secondary);
+}
+
+/* footer:nth-child(3){
+  border-top: 15px solid red;
+} */
+
+footer:not(:first-child) {
+  border-top: 1px solid var(--color-tertiary);
+}
+
+footer .input-group-text {
+  background-color: var(--color-quaternary);
+  color: var(--color-tertiary);
+  padding: 8px 17px;
+  margin-left: -1px;
 }
