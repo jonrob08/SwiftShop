@@ -24,7 +24,7 @@ const Header = () => {
         <div className="row align-items-center">
           <div className="col-2">
             <h2>
-              <Link className='text-white'>Dev Corner</Link>
+              <Link className='text-white'>SwiftShop</Link>
             </h2>
           </div>
           <div className="col-5">
@@ -35,7 +35,7 @@ const Header = () => {
                 placeholder="Search for your perfect product" 
                 aria-describedby="basic-addon2" 
               />
-              <span class="input-group-addon p-3" id="basic-addon2">
+              <span class="input-group-text p-3" id="basic-addon2">
                 <BsSearch className='fs-5'/>
               </span>
             </div>
