@@ -7,6 +7,8 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
  - Note: These are initial mockups for the site and are subject to change. 
 
  # Steps to create front end
- 1. Run these commands: 
+   Run these commands: 
     - npx create-react-app swiftshop --template redux
     - npm i react-icons react-router-dom
+   Folder Structure: 
+   
