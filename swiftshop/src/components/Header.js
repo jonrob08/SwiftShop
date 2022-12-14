@@ -45,7 +45,7 @@ const Header = () => {
               <div>
                 <Link className='d-flex align-items-center gap-10'>
                   <img src="images/compare.svg" alt="compare" />
-                  <p>
+                  <p className='mb-0'>
                     Compare <br /> Products
                   </p>
                 </Link>
@@ -53,7 +53,7 @@ const Header = () => {
               <div>
                 <Link className='d-flex align-items-center gap-10'>
                   <img src="images/wishlist.svg" alt="wishlist" />
-                  <p>
+                  <p className='mb-0'>
                   Favorites <br /> Wishlist
                   </p>
                 </Link>
@@ -61,7 +61,7 @@ const Header = () => {
               <div>
                 <Link className='d-flex align-items-center gap-10'>
                   <img src="images/user.svg" alt="login" />
-                  <p>
+                  <p className='mb-0'>
                   Login To <br /> My Account
                   </p>
                 </Link>
@@ -71,9 +71,39 @@ const Header = () => {
                   <img src="images/cart.svg" alt="cart" />
                   <div className="d-flex flex-column">
                     <span className='badge bg-white text-dark'>0</span>
-                    <p>$500</p>
+                    <p className='mb-0'>$500</p>
                   </div>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </header>
+     <header className="header-bottom py-3">
+      <div className="container-xxl">
+        <div className="row">
+          <div className="col-12">
+            <div className="menu-bottom d-flex align-items-center">
+              <div>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown button
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className='menu-links'>
+                <div className="d-flex align-items gap-15">
+                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/">Store</NavLink>
+                  <NavLink to="/">Blog</NavLink>
+                  <NavLink to="/">Contact</NavLink>
+                </div>
               </div>
             </div>
           </div>
