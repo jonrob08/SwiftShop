@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactStars from 'react-rating-stars-component'
+import { Link } from 'react-router-dom'
 
 const SpecProduct = () => {
   return (
@@ -24,16 +25,31 @@ const SpecProduct = () => {
                         &nbsp; 
                         <strike>$249.99</strike>
                     </p>
-                    <div className="discount-until">
-                        <p>
-                            <b>5 days</b>
+                    <div className="discount-until d-flex align-items-center gap-10">
+                        <p className='mb-0'>
+                            <b>5 </b><span>days</span>
                         </p>
-                        <div className="d-flex gap-10">
-                            <span className='badge rounded-circle p-3 bg-warning'>1</span>
-                            <span className='badge rounded-circle p-3 bg-warning'>1</span>
-                            <span className='badge rounded-circle p-3 bg-warning'>1</span>
+                        <div className="d-flex gap-10 align-items-center">
+                            <span className='badge rounded-circle p-2 bg-warning'>1</span>:
+                            <span className='badge rounded-circle p-2 bg-warning'>1</span>:
+                            <span className='badge rounded-circle p-2 bg-warning'>1</span>
                         </div>
+                        
                     </div>
+                    <div className="prod-count my-3">
+                            <p>Products: 5</p>
+                            <div className="progress">
+                                <div 
+                                    className="progress-bar"
+                                    role="progressbar"
+                                    style={{ 'width': '35%' }}
+                                    aria-valuenow='35'
+                                    aria-valuemin='0'
+                                    aria-valuemax='100'
+                                ></div>
+                            </div>
+                        </div>
+                        <Link className='button'>Add To Cart</Link>
                 </div>
             </div>
         </div>
