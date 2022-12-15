@@ -114,3 +114,10 @@ footer .input-group-text {
   padding: 8px 17px;
   margin-left: -1px;
 }
+
+
+/* Home Page */
+.main-banner-content {
+  top:10%;
+  left:5%;
+}
