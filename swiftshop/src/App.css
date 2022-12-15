@@ -202,3 +202,16 @@ footer .input-group-text {
   width: max-content;
   padding-right: 5%;
 }
+
+/* Home Categories */
+
+.categories {
+  background-color: #DDA15E;
+  box-shadow: 0 0 10px var(--color-primary);
+  padding: 15px;
+}
+
+.categories img {
+  max-width: 200px;
+  max-height: 100px;
+}
