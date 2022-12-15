@@ -5,6 +5,7 @@ import Marquee from 'react-fast-marquee'
 
 import BlogCard from '../components/BlogCard'
 import ProductCard from '../components/ProductCard'
+import SpecProduct from '../components/SpecProduct'
 
 const Home = () => {
   return (
@@ -192,6 +193,22 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
             <ProductCard />
+          </div>
+        </div>
+      </section>
+      {/* special products */}
+      <section className="special-wrapper py-5">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">Specialty Items</h3>
+            </div>
+
+          </div>
+          <div className="row">
+            <SpecProduct />
+            <SpecProduct />
+            <SpecProduct />
           </div>
         </div>
       </section>
