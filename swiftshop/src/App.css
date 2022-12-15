@@ -35,6 +35,10 @@ a {
   border-color: inherit;
 }
 
+.gap-5 {
+  gap: 5px;
+}
+
 .gap-10 {
   gap: 10px;
 }
@@ -364,4 +368,44 @@ footer .input-group-text {
 
 .small-text {
   font-size: 12px;
+}
+
+.special-product-card .badge {
+  background-color: red !important;
+  height: 28px;
+  width: 28px;
+}
+
+/* hot sellers  */
+.hot-seller-card img {
+  border-radius: 10px;
+}
+
+.hot-seller-card .hot-seller-content {
+  top: 10%;
+  left: 10%;
+}
+
+.hot-seller-content h5 {
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--color-tertiary);
+  margin-bottom: 7px;
+}
+
+.hot-seller-content h6 {
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 500;
+  color: var(--color-tertiary);
+}
+
+.hot-seller-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100;
+  color: var(--color-quaternary);
 }

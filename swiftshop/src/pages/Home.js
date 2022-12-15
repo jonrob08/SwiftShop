@@ -196,6 +196,23 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* hot selling items */}
+      <section className="hot-sellers">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-3">
+              <div className="hot-seller-card position-relative">
+              <img src="images/subbanner-01.webp" alt="hot seller" />
+                <div className="hot-seller-content position-absolute">
+                <h5>Big Screen</h5>
+                <h6>Smart Watch Series 7</h6>
+                <p>From $399 or $16.62/mo. for 24 mo.*</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* special products */}
       <section className="special-wrapper py-5">
         <div className="container-xxl">
@@ -209,6 +226,22 @@ const Home = () => {
             <SpecProduct />
             <SpecProduct />
             <SpecProduct />
+          </div>
+        </div>
+      </section>
+      {/* popular products */}
+      <section className="popular-wrapper py-5">
+        <div className="container-xxl">
+          <div className="row">
+          <div className="col-12">
+            <h3 className="section-heading">Our Most Popular Products</h3>
+          </div>
+          </div>
+          <div className="row">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
           </div>
         </div>
       </section>
