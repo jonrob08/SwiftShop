@@ -5,6 +5,7 @@ import { BsTruck, BsGift, BsHeadset, BsCurrencyDollar, BsCreditCard2Back  } from
 const Home = () => {
   return (
     <>
+      {/* wrapper 1 */}
       <section className="home-wrapper-1 py-5">
         <div className="container-xxl">
           <div className="row">
@@ -63,46 +64,59 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* wrapper 2 */}
       <section className="home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
               <div className="services d-flex align-items-center justify-content-between">
-                <div>
-                  <BsTruck size='75'></BsTruck>
+                <div className="icon d-flex align-items-center gap-15">
+                  <BsTruck size='50'></BsTruck>
                   <div>
-                    <h6></h6>
-                    <p></p>
+                    <h6>Free Shipping</h6>
+                    <p className="mb-0">On all orders over $100</p>
                   </div>
                 </div>
-                <div>
-                  <BsGift></BsGift>
+                <div className="icon d-flex align-items-center gap-15">
+                  <BsGift size='50'></BsGift>
                   <div>
-                    <h6></h6>
-                    <p></p>
+                    <h6>Daily Login Gifts</h6>
+                    <p className="mb-0">Save up to 25% off</p>
                   </div>
                 </div>
-                <div>
-                  <BsHeadset></BsHeadset>
+                <div className="icon d-flex align-items-center gap-15">
+                  <BsHeadset size='50'></BsHeadset>
                     <div>
-                      <h6></h6>
-                      <p></p>
+                      <h6>24/7 Live Support</h6>
+                      <p className="mb-0">Shopping experts await your call</p>
                     </div>
                 </div>
-                <div>
-                  <BsCurrencyDollar></BsCurrencyDollar>
+                <div className="icon d-flex align-items-center gap-15">
+                  <BsCurrencyDollar size='50'></BsCurrencyDollar>
                   <div>
-                      <h6></h6>
-                      <p></p>
+                      <h6>Always Affordable</h6>
+                      <p className="mb-0">Price Match Guarantee</p>
                     </div>
                   </div>
-                <div>
-                  <BsCreditCard2Back></BsCreditCard2Back>
+                <div className="icon d-flex align-items-center gap-15">
+                  <BsCreditCard2Back size='50'></BsCreditCard2Back>
                   <div>
-                      <h6></h6>
-                      <p></p>
+                      <h6>Secure Payments</h6>
+                      <p className="mb-0">Wide variety of secure payment options</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* categories section */}
+      <section className="homewrapper-3 py-5">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="categories">
+                
               </div>
             </div>
           </div>

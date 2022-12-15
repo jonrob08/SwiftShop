@@ -131,6 +131,7 @@ footer .input-group-text {
 
 
 /* Home Page */
+/* Home Wrapper 1 */
 .main-banner-content {
   top: 15%;
   left: 5%;
@@ -193,4 +194,11 @@ footer .input-group-text {
 
 .small-banner {
   width: 49%;
+}
+
+/* Home Wrapper 2 */
+
+.icon div {
+  width: max-content;
+  padding-right: 5%;
 }
