@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { BsTruck, BsGift, BsHeadset, BsCurrencyDollar, BsCreditCard2Back  } from 'react-icons/bs'
 import Marquee from 'react-fast-marquee'
 
+import BlogCard from '../components/BlogCard'
+
 const Home = () => {
   return (
     <>
@@ -178,6 +180,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* marquee */}
       <section className="marquee-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
@@ -211,6 +214,17 @@ const Home = () => {
                 </Marquee>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* blog wrapper */}
+      <section className="blog-wrapper py-5">
+        <div className="container-xxl">
+          <div className="row">
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
           </div>
         </div>
       </section>
