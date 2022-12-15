@@ -115,34 +115,62 @@ const Home = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="categories d-flex justify-content-between align-items-center">
-                <div className='d-flex gap-30 align-items-center'>
+              <div className="categories d-flex justify-content-between flex-wrap align-items-center">
+                <div className='d-flex gap align-items-center'>
                   <div>
                     <h6>Cameras</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/retro-camera.jpeg" alt="old style camera" />
+                  <img src="images/camera.jpg" alt="old style camera" />
                 </div>
-                <div className='d-flex gap-30 align-items-center'>
+                <div className='d-flex gap align-items-center'>
                   <div>
                     <h6>Smart Tv</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/tv.jpeg" alt="smart television" />
+                  <img src="images/tv.jpg" alt="smart television" />
                 </div>
-                <div className='d-flex gap-30 align-items-center'>
+                <div className='d-flex gap align-items-center'>
                   <div>
                     <h6>Watches</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/smart-watch.jpg" alt="smart watch" />
+                  <img src="images/headphone.jpg" alt="smart watch" />
                 </div>
-                <div className='d-flex gap-30 align-items-center'>
+                <div className='d-flex gap align-items-center'>
                   <div>
                     <h6>Gaming</h6>
                     <p>10 Items</p>
                   </div>
-                  <img src="images/gamecast.jpeg" alt="i can't afford it" />
+                  <img src="images/camera.jpg" alt="gaming" />
+                </div>
+                <div className='d-flex gap align-items-center'>
+                  <div>
+                    <h6>Cameras</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/camera.jpg" alt="old style camera" />
+                </div>
+                <div className='d-flex gap align-items-center'>
+                  <div>
+                    <h6>Smart Tv</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/tv.jpg" alt="smart television" />
+                </div>
+                <div className='d-flex gap align-items-center'>
+                  <div>
+                    <h6>Watches</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/headphone.jpg" alt="smart watch" />
+                </div>
+                <div className='d-flex gap align-items-center'>
+                  <div>
+                    <h6>Gaming</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src="images/camera.jpg" alt="gaming" />
                 </div>
               </div>
             </div>
