@@ -294,3 +294,25 @@ footer .input-group-text {
   color: var(--color-tertiary);
 }
 
+/* Product Card */
+.product-card {
+  padding: 15px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 10px var(--color-primary);
+  border-radius: 10px;
+}
+
+.product-card .product-details h6 {
+  color: var(--color-primary);
+  font-size: 13px;
+}
+
+.product-card .product-details h5 {
+  color: var(--color-quinary);
+  font-size: 15px;
+}
+
+.product-card .product-details p.price {
+  font-size: 16px;
+  color: var(--color-quaternary);
+}

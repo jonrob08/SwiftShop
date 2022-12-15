@@ -4,6 +4,7 @@ import { BsTruck, BsGift, BsHeadset, BsCurrencyDollar, BsCreditCard2Back  } from
 import Marquee from 'react-fast-marquee'
 
 import BlogCard from '../components/BlogCard'
+import ProductCard from '../components/ProductCard'
 
 const Home = () => {
   return (
@@ -224,7 +225,10 @@ const Home = () => {
           <div className="col-12">
             <h3 className="section-heading">Featured Products</h3>
           </div>
-            
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
           </div>
         </div>
       </section>

@@ -9,6 +9,6 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
  # Steps to create front end
    Run these commands: 
     - npx create-react-app swiftshop --template redux
-    - npm i react-icons react-router-dom react-fast-marquee
+    - npm i react-icons react-router-dom react-fast-marquee react-rating-stars-component
    Folder Structure: 
    
