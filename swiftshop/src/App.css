@@ -190,3 +190,7 @@ footer .input-group-text {
   letter-spacing: 0.4;
   color: var(--color-primary)
 }
+
+.small-banner {
+  width: 49%;
+}
