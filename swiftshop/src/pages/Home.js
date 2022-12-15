@@ -202,11 +202,41 @@ const Home = () => {
           <div className="row">
             <div className="col-3">
               <div className="hot-seller-card position-relative">
-              <img src="images/subbanner-01.webp" alt="hot seller" />
+              <img src="images/subbanner-01.webp" className='img-fluid' alt="hot seller" />
                 <div className="hot-seller-content position-absolute">
                 <h5>Big Screen</h5>
                 <h6>Smart Watch Series 7</h6>
                 <p>From $399 or $16.62/mo. for 24 mo.*</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="hot-seller-card position-relative">
+              <img src="images/subbanner-02.webp" className='img-fluid' alt="hot seller" />
+                <div className="hot-seller-content position-absolute">
+                <h5 className='text-dark'>Retina Display</h5>
+                <h6 className='text-dark'>Dream Laptop</h6>
+                <p className='text-dark'>From $2999 or $36.82/mo. for 32 mo.*</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="hot-seller-card position-relative">
+              <img src="images/subbanner-03.webp" className='img-fluid' alt="hot seller" />
+                <div className="hot-seller-content position-absolute">
+                <h5 className='text-dark'>Latest phone tech</h5>
+                <h6 className='text-dark'>iPhone 13 or 14?</h6>
+                <p className='text-dark'>From $999 or $14.82/mo. for 24 mo.*</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="hot-seller-card position-relative">
+              <img src="images/subbanner-04.webp" className='img-fluid' alt="hot seller" />
+                <div className="hot-seller-content position-absolute">
+                <h5 className='text-dark'>Home Audio</h5>
+                <h6 className='text-dark'>JBL x LBJ Collab</h6>
+                <p className='text-dark'>Lebron James will deliver this to your house.</p>
                 </div>
               </div>
             </div>
@@ -223,6 +253,7 @@ const Home = () => {
 
           </div>
           <div className="row">
+            <SpecProduct />
             <SpecProduct />
             <SpecProduct />
             <SpecProduct />
