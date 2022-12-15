@@ -217,10 +217,24 @@ const Home = () => {
           </div>
         </div>
       </section>
+            {/* featured products */}
+            <section className="blog-wrapper py-5">
+        <div className="container-xxl">
+          <div className="row">
+          <div className="col-12">
+            <h3 className="section-heading">Featured Products</h3>
+          </div>
+            
+          </div>
+        </div>
+      </section>
       {/* blog wrapper */}
       <section className="blog-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
+          <div className="col-12">
+            <h3 className="section-heading">Our Latest Blogs</h3>
+          </div>
             <BlogCard />
             <BlogCard />
             <BlogCard />

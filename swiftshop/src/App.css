@@ -23,6 +23,13 @@ a {
   display: inline-block;
 }
 
+.section-heading {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
 .form-control:focus {
   box-shadow: none;
   border-color: inherit;
@@ -286,3 +293,4 @@ footer .input-group-text {
   line-height: 32px;
   color: var(--color-tertiary);
 }
+
