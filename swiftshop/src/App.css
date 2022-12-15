@@ -242,3 +242,10 @@ footer .input-group-text {
 .categories > div > img {
   padding-left: 15px;
 }
+
+/* Marquee */
+.marquee-inner-wrapper {
+  background-color: white;
+  box-shadow: 0 0 25px var(--color-primary);
+  padding: 15px;
+}

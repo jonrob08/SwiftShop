@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { BsTruck, BsGift, BsHeadset, BsCurrencyDollar, BsCreditCard2Back  } from 'react-icons/bs'
+import Marquee from 'react-fast-marquee'
 
 const Home = () => {
   return (
@@ -111,7 +112,7 @@ const Home = () => {
         </div>
       </section>
       {/* categories section */}
-      <section className="homewrapper-3 py-5">
+      <section className="category-section py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
@@ -172,6 +173,19 @@ const Home = () => {
                   </div>
                   <img src="images/camera.jpg" alt="gaming" />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="marquee-wrapper py-5">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="marquee-inner-wrapper bg-white p-3">
+                <Marquee>
+                  Whooaaaaaaaaaaaaaaaaaaaaaaaaa
+                </Marquee>
               </div>
             </div>
           </div>
