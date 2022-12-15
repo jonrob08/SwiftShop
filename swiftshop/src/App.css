@@ -300,6 +300,11 @@ footer .input-group-text {
   background-color: var(--color-secondary);
   box-shadow: 0 0 10px var(--color-primary);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-card:hover .action-bar {
+  right: 40px;
 }
 
 .product-card .product-details h6 {
@@ -315,4 +320,10 @@ footer .input-group-text {
 .product-card .product-details p.price {
   font-size: 16px;
   color: var(--color-quaternary);
+}
+
+.action-bar {
+  top: 10%;
+  right: -20px;
+  transition: .3s;
 }
