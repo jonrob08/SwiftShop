@@ -9,17 +9,30 @@ const Home = () => {
           <div className="row">
             <div className="col-6">
               <div className="main-banner p-3 position-relative p-3">
-                <img src="images/main-banner-2.jpeg" className='img-fluid rounded-3' alt="main banner" />
+                <img src="images/main-banner-1.jpg" className='img-fluid rounded-3' alt="main banner" />
                 <div className="main-banner-content position-absolute">
                   <h4>Long-Lasting Battery Life.</h4>
                   <h4>Noise Cancellation.</h4>
                   <h5>BOSE Alpha</h5>
                   <p>From $999.99 or $74.33/mo.</p>
-                  <Link>BUY NOW</Link>
+                  <Link className='button'>BUY NOW</Link>
                 </div>
               </div>
             </div>
-            <div className="col-6"></div>
+            <div className="col-6">
+              <div className="d-flex flex-wrap justify-content-between align-items-center">
+                <div className="small-banner p-3 position-relative p-3">
+                  <img src="images/main-banner-1.jpg" className='img-fluid rounded-3' alt="main banner" />
+                  <div className="small-banner-content position-absolute">
+                    <h4>Long-Lasting Battery Life.</h4>
+                    <h4>Noise Cancellation.</h4>
+                    <h5>BOSE Alpha</h5>
+                    <p>From $999.99 or $74.33/mo.</p>
+                    <Link className='button'>BUY NOW</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
