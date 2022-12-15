@@ -22,7 +22,26 @@ const Home = () => {
             <div className="col-6">
               <div className="d-flex flex-wrap justify-content-between align-items-center">
                 <div className="small-banner p-3 position-relative p-3">
-                  <img src="images/main-banner-1.jpg" className='img-fluid rounded-3' alt="main banner" />
+                  <img src="images/smol-banner-1.jpg" className='img-fluid rounded-3' alt="small banner 1" />
+                  <div className="small-banner-content position-absolute">
+                    <h4>Sales on New Items</h4>
+                    <h4>While supplies last.</h4>
+                    <h5>Brand New Laptops</h5>
+                    <p>From $599.99 or $26.37/mo.</p>
+                  </div>
+                </div>
+                <div className="small-banner p-3 position-relative p-3">
+                  <img src="images/smol-banner-2.jpg" className='img-fluid rounded-3' alt="small banner 1" />
+                  <div className="small-banner-content position-absolute">
+                    <h4>Water Proof.</h4>
+                    <h4>Life Proof.</h4>
+                    <h5>Pineapple Watches</h5>
+                    <p>Christmas Special $249.99</p>
+                    <Link className='button'>BUY NOW</Link>
+                  </div>
+                </div>
+                <div className="small-banner p-3 position-relative p-3">
+                  <img src="images/smol-banner-1.jpg" className='img-fluid rounded-3' alt="small banner 1" />
                   <div className="small-banner-content position-absolute">
                     <h4>Long-Lasting Battery Life.</h4>
                     <h4>Noise Cancellation.</h4>
