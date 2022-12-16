@@ -568,4 +568,10 @@ footer .input-group-text {
   background-color: var(--color-tertiary);
   border-radius: 10px;
   border-color: transparent;
+  padding: 10px;
+}
+
+.contact-inner-wrapper ul, .contact-inner-wrapper a  {
+  list-style-type: none;
+  color: var(--color-quaternary);
 }

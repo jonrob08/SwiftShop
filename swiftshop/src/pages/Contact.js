@@ -1,6 +1,7 @@
 import React from 'react'
 import Meta from '../components/Meta'
 import BreadCrumb from '../components/BreadCrumb'
+import { BsHouse, BsTelephone, BsMailbox, BsInfoCircle  } from 'react-icons/bs'
 
 const Contact = () => {
   const title = "Contact Us"
@@ -44,6 +45,26 @@ const Contact = () => {
                   <h3 className="contact-title mb-4">
                     Get In Touch With Us
                   </h3>
+                  <div>
+                    <ul className='ps-0'>
+                      <li className='mb-3 d-flex gap-15 align-items-center'>
+                        <BsHouse className='fs-5'/>
+                        <address className='mb-0'>635 S Ellis St., Chandler, AZ 85224</address>
+                      </li>
+                      <li className='mb-3 d-flex gap-15 align-items-center'> 
+                        <BsTelephone className='fs-5'/> 
+                        <a href="tel:+1 7175929969">+1 (717) 592-9969</a>
+                      </li>
+                      <li className='mb-3 d-flex gap-15 align-items-center'> 
+                        <BsMailbox className='fs-5'/>
+                        <a href="mailto:jonrob08@gmail.com">jonrob08@gmail.com</a>
+                       </li>
+                      <li className='mb-3 d-flex gap-15 align-items-center'> 
+                        <BsInfoCircle className='fs-5'/>
+                        <p className='mb-0'>Monday - Friday 8 AM - 6 PM</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
