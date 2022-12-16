@@ -161,7 +161,30 @@ const Store = () => {
                 </div>
               </div>
             </div>
-            <div className="col-9"></div>
+            <div className="col-9">
+                <div className="filter-sort-grid">
+                <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center gap-10">
+                        <p className="mb-0">
+                            Sort By:
+                        </p>
+                        <select name="" className="form-control form-select" id="">
+                            <option value="manual">Featured</option>
+                            <option value="best-selling">Best Selling</option>
+                            <option value="title-asc">A - Z</option>
+                            <option value="title-desc">Z - A</option>
+                            <option value="price-asc">High - Low</option>
+                            <option value="price-desc">Low - High</option>
+                            <option value="created-asc">Oldest - Newest</option>
+                            <option value="created-desc">Newest - Oldest</option>
+                        </select>
+                    </div>
+                    <div>
+
+                    </div>
+                </div> 
+                </div>
+            </div>
           </div>
         </div>
       </div>
