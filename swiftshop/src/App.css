@@ -414,7 +414,7 @@ footer .input-group-text {
 .filter-card {
   background-color: var(--color-secondary);
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 15px 15px 25px;
 }
 
 .filter-title {
@@ -425,7 +425,7 @@ footer .input-group-text {
   margin-bottom: 20px;
 }
 
-.filter-card ul {
+.filter-card ul, .filter-card, .form-check-label {
   list-style-type: none;
   font-size: 13px;
   line-height: 30px;
@@ -433,9 +433,48 @@ footer .input-group-text {
   cursor: pointer;
 }
 
+.filter-card .form-check-input:focus {
+  box-shadow: none;
+  border-color: var(--color-primary);
+}
+
+.filter-card .form-check-input:checked {
+  background-color: var(--color-quaternary);
+  border-color: var(--color-primary);
+
+}
+
 .subtitle {
   font-size: 14px;
   font-weight: 600;
   color: var(--color-quaternary);
   margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.form-floating>label {
+  color: var(--color-quinary)
+}
+
+.colors {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.colors li {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.rec-products h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.rec-products:first-child {
+  border-bottom: 1px solid var(--color-quinary)
 }
