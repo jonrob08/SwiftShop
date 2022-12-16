@@ -26,8 +26,19 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className="col-9">
-                    <div className="d-flex gap-10">
-                        <BlogCard />
+                    <div className="row">
+                        <div className="col-6 mb-3">
+                            <BlogCard />
+                        </div>
+                        <div className="col-6 mb-3">
+                            <BlogCard />
+                        </div>
+                        <div className="col-6 mb-3">
+                            <BlogCard />
+                        </div>
+                        <div className="col-6 mb-3">
+                            <BlogCard />
+                        </div>
                     </div>
                 </div>
             </div>

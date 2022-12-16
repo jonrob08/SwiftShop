@@ -5,7 +5,7 @@ const BlogCard = () => {
   return (
         <div className="blog-card">
             <div className="card-image">
-                <img src="images/blog-1.jpg" className="img-fluid" alt="" />
+                <img src="images/blog-1.jpg" className="img-fluid w-100" alt="" />
             </div>
             <div className="blog-content">
                 <p className="date">Dec 14, 2022</p>
