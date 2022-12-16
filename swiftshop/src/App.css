@@ -305,6 +305,7 @@ footer .input-group-text {
   box-shadow: 0 0 10px var(--color-primary);
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .product-card .product-image {
@@ -492,3 +493,21 @@ footer .input-group-text {
   padding: 6px;
   border-radius: 3px;
 }
+
+.gr-12 {
+  width: 100%;
+}
+
+.gr-6 {
+  width: 49%;
+}
+
+.gr-4 {
+  width: 32%;
+}
+
+.gr-3 {
+  width: 24%;
+}
+
+
