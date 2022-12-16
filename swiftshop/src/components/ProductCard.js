@@ -23,6 +23,8 @@ const ProductCard = (props) => {
                     Info about the waaatch watch watch watch which watch
                 </h5>
                 <ReactStars count={5} size={24} value="3" edit={false} activeColor='#ffd700'></ReactStars>
+                <p className="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis, neque sit amet lacinia suscipit, odio nisl vulputate nisi, eget eleifend libero metus ac lacus.</p>
                 <p className='price'>$199.99</p>
             </div>
             <div className="action-bar position-absolute">
@@ -55,6 +57,7 @@ const ProductCard = (props) => {
                     Info about the waaatch watch watch watch which watch
                 </h5>
                 <ReactStars count={5} size={24} value="3" edit={false} activeColor='#ffd700'></ReactStars>
+                <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis, neque sit amet lacinia suscipit, odio nisl vulputate nisi, eget eleifend libero metus ac lacus.</p>
                 <p className='price'>$199.99</p>
             </div>
             <div className="action-bar position-absolute">
