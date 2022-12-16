@@ -28,14 +28,14 @@ const Header = () => {
             </h2>
           </div>
           <div className="col-5">
-            <div class="input-group">
+            <div className="input-group">
               <input 
                 type="text" 
                 className="form-control py-2" 
                 placeholder="Search for your perfect product" 
                 aria-describedby="basic-addon2" 
               />
-              <span class="input-group-text p-3" id="basic-addon2">
+              <span className="input-group-text p-3" id="basic-addon2">
                 <BsSearch className='fs-5'/>
               </span>
             </div>

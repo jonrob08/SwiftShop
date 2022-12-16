@@ -563,3 +563,9 @@ footer .input-group-text {
   text-align: left;
   margin-top: 0;
 }
+
+.contact-inner-wrapper form .form-control {
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+  border-color: transparent;
+}

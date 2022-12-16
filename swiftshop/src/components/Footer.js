@@ -15,14 +15,14 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-7">
-            <div class="input-group">
+            <div className="input-group">
               <input 
                 type="text" 
                 className="form-control py-1" 
                 placeholder="Your email address" 
                 aria-describedby="basic-addon2" 
               />
-              <span class="input-group-text p-2" id="basic-addon2">
+              <span className="input-group-text p-2" id="basic-addon2">
                Subscribe
               </span>
             </div>
