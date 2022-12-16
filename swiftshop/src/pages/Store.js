@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 import BreadCrumb from "../components/BreadCrumb";
@@ -6,6 +6,12 @@ import Meta from "../components/Meta";
 
 const Store = () => {
   const title = "Store";
+  const [grid, setGrid] = useState(4);
+  alert(grid)
+
+  const gridSetter = (i) => {
+    setGrid(i);
+  }
 
   return (
     <>
@@ -162,10 +168,10 @@ const Store = () => {
               </div>
             </div>
             <div className="col-9">
-                <div className="filter-sort-grid">
+                <div className="filter-sort-grid mb-3">
                 <div className="d-flex justify-content-between align-items-center">
                 <div className="d-flex align-items-center gap-10">
-                        <p className="mb-0">
+                        <p className="mb-0 d-block" style={{ width: "100px" }}>
                             Sort By:
                         </p>
                         <select name="" className="form-control form-select" id="">
@@ -179,10 +185,19 @@ const Store = () => {
                             <option value="created-desc">Newest - Oldest</option>
                         </select>
                     </div>
-                    <div>
-
+                    <div className="d-flex align-items-center gap-10">
+                        <p className="totalproducts mb-0">21 products</p>
+                        <div className="d-flex gap-10 align-items-center grid-icon">
+                        <img onClick={() => {setGrid(4)}} src="images/gr4.svg" alt="grid" className="d-block img-fluid" />
+                        <img onClick={() => {setGrid(3)}} src="images/gr3.svg" alt="grid" className="d-block img-fluid" />
+                            <img onClick={() => {setGrid(2)}} src="images/gr2.svg" alt="grid" className="d-block img-fluid" />
+                            <img onClick={() => {setGrid(1)}} src="images/gr.svg" alt="grid" className="d-block img-fluid" />
+                        </div>
                     </div>
                 </div> 
+                </div>
+                <div className="products-list pb-5">
+
                 </div>
             </div>
           </div>

@@ -484,3 +484,11 @@ footer .input-group-text {
   background-color: var(--color-quaternary);
   border-radius: 10px;
 }
+
+.grid-icon img {
+  width: 34px;
+  height: 34px;
+  background-color: var(--color-tertiary);
+  padding: 6px;
+  border-radius: 3px;
+}
