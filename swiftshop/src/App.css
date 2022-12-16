@@ -409,3 +409,33 @@ footer .input-group-text {
   font-weight: 100;
   color: var(--color-quaternary);
 }
+
+/* Store */
+.filter-card {
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.filter-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--color-tertiary);
+  margin-bottom: 20px;
+}
+
+.filter-card ul {
+  list-style-type: none;
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--color-tertiary);
+  cursor: pointer;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-quaternary);
+  margin-bottom: 15px;
+}
