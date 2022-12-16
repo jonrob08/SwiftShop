@@ -3,6 +3,7 @@ import ReactStars from "react-rating-stars-component";
 
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
+import ProductCard from '../components/ProductCard'
 
 const Store = () => {
   const title = "Store";
@@ -197,7 +198,7 @@ const Store = () => {
                 </div> 
                 </div>
                 <div className="products-list pb-5">
-
+                    <ProductCard />
                 </div>
             </div>
           </div>
