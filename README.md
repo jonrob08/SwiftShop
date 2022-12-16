@@ -6,6 +6,29 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
 
  - Note: These are initial mockups for the site and are subject to change. 
 
+### Initial Mockup of Home Page
+ ![](./swiftshop/public/images/wireframes/swiftshop-1.png)
+ ![](./swiftshop/public/images/wireframes/swiftshop-2.png)
+### Color Palletes
+ ![](./swiftshop/public/images/wireframes/color-pallete.png)
+### Home Page
+ ![](./swiftshop/public/images/wireframes/home-1.png)
+ ![](./swiftshop/public/images/wireframes/home-2.png)
+ ![](./swiftshop/public/images/wireframes/home-3.png)
+ ![](./swiftshop/public/images/wireframes/home-4.png)
+ ![](./swiftshop/public/images/wireframes/home-5.png)
+### Store Page
+ ![](./swiftshop/public/images/wireframes/store-1.png)
+### Blog
+ ![](./swiftshop/public/images/wireframes/blog-1.png)
+ ![](./swiftshop/public/images/wireframes/blog-2.png)
+### Compare Items Page
+ ![](./swiftshop/public/images/wireframes/compare.png)
+### Wishlist
+ ![](./swiftshop/public/images/wireframes/wishlist.png)
+### Contact Us
+ ![](./swiftshop/public/images/wireframes/contact.png)
+
  # Steps to create front end
    Run these commands: 
     - npx create-react-app swiftshop --template redux
