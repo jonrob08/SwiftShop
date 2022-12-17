@@ -8,6 +8,7 @@ import ForgotPassword from "./ForgotPassword";
 import Home from "./Home";
 import Login from "./Login";
 import PrivacyPolicy from "./PrivacyPolicy";
+import Product from "./Product";
 import RefundPolicy from "./RefundPolicy";
 import ResetPassword from "./ResetPassword";
 import ShippingPolicy from "./ShippingPolicy";
@@ -27,6 +28,7 @@ export {
     Home,
     Login,
     PrivacyPolicy,
+    Product,
     RefundPolicy,
     ResetPassword,
     ShippingPolicy,
