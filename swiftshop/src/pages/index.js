@@ -7,9 +7,13 @@ import Contact from "./Contact";
 import ForgotPassword from "./ForgotPassword";
 import Home from "./Home";
 import Login from "./Login";
+import PrivacyPolicy from "./PrivacyPolicy";
+import RefundPolicy from "./RefundPolicy";
 import ResetPassword from "./ResetPassword";
+import ShippingPolicy from "./ShippingPolicy";
 import Signup from "./Signup";
 import Store from "./Store";
+import TermsAndConditions from "./TermsAndConditions";
 import Wishlist from "./Wishlist"
 
 export {
@@ -22,8 +26,12 @@ export {
     ForgotPassword,
     Home,
     Login,
+    PrivacyPolicy,
+    RefundPolicy,
     ResetPassword,
+    ShippingPolicy,
     Signup,
     Store,
+    TermsAndConditions,
     Wishlist
 }
