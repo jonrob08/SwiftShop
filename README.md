@@ -55,3 +55,4 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
 ## Dev Notes
 ### Bugs To Fix
   1. On the login, signup, and forgot password page there is a horizontal scroll wheel. Double check CSS here. 
+  2. Broken images literally everywhere...
