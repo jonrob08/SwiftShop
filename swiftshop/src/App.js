@@ -2,12 +2,18 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout';
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
-import Store from './pages/Store';
-import Compare from './pages/Compare';
-import Wishlist from './pages/Wishlist';
+import { 
+  Home,
+  Store, 
+  Blog, 
+  Contact, 
+  Compare, 
+  Wishlist, 
+  Login, Signup, 
+  ForgotPassword, 
+  ResetPassword,
+  Article 
+} from './pages';
 
 function App() {
   return (
@@ -18,9 +24,14 @@ function App() {
           <Route index element={<Home />} />
           <Route path="store" element={<Store />}/>
           <Route path="blog" element={<Blog />}/>
+          <Route path="blog/:id" element={<Article />}/>
           <Route path="contact" element={<Contact />}/>
           <Route path="compare" element={<Compare />}/>
           <Route path="wishlist" element={<Wishlist />}/>
+          <Route path="login" element={<Login />}/>
+          <Route path="signup" element={<Signup />}/>
+          <Route path="forgot" element={<ForgotPassword />}/>
+          <Route path="reset" element={<ResetPassword />}/>
         </Route>
       </Routes>
     </BrowserRouter>
