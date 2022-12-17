@@ -11,7 +11,7 @@ const BlogCard = () => {
                 <p className="date">Dec 14, 2022</p>
                 <h5 className="title">A Beautiful Day To Spend Inside VR</h5>
                 <p className="description">Ever feel like you're missing something, trust us your wildest dreams will come true after you've read this.</p>
-                <Link to="/" className="button">
+                <Link to="/blog/:id" className="button">
                     Read More
                 </Link>
             </div>
