@@ -6,7 +6,7 @@ import ProductCard from '../components/ProductCard'
 
 const Product = () => {
   const title = "Dynamic Product Name";
-  const [productBought, setProductBought] = useState(false)
+  const [productBought, setProductBought] = useState(true)
 
   return (
     <>
@@ -38,25 +38,51 @@ const Product = () => {
         <div className="container-xxl">
             <div className="row">
                 <div className="col-12">
-                    <div className="review-head d-flex justify-content-between align-items-end">
-                        <div>
-                            <h4 className="mb-2">Customer Reviews</h4>
+                    <div className="review-inner-wrapper">
+                        <div className="review-header d-flex justify-content-between align-items-end">
                             <div>
-                                <ReactStars 
-                                    count={5} 
-                                    size={24} 
-                                    value="3" 
-                                    edit={false} 
-                                    activeColor='#ffd700'
-                                />
+                                <h4 className="mb-2">Customer Reviews</h4>
+                                <div>
+                                    <ReactStars 
+                                        count={5} 
+                                        size={24} 
+                                        value="3" 
+                                        edit={false} 
+                                        activeColor='#ffd700'
+                                    />
+                                </div>
+                                <p className="mb-0">Based on 2 reviews</p>
                             </div>
-                            <p className="mb-0">Based on 2 reviews</p>
+                            {productBought && (
+                                <div>
+                                    <a className="text-dark text-decoration-underline" href="">Write a Review</a>
+                                </div>
+                            )}
                         </div>
-                        {productBought && (
+                        <div className="review-form">
+                            <h4>Write a Review</h4>
+                            <form action="" className='d-flex flex-column gap-15'>
                             <div>
-                                <a href="">Write a Review</a>
+                            <div>
+                                    <ReactStars 
+                                        count={5} 
+                                        size={24} 
+                                        value="" 
+                                        edit={true} 
+                                        activeColor='#ffd700'
+                                    />
+                                </div>
                             </div>
-                        )}
+                        <div>
+                        <textarea className="w-100 form-control" placeholder='Comments...' name="" id="" cols="30" rows="4"></textarea>
+                        </div>
+                        <div className="d-flex justify-content-end">
+                        <button className='button border-0'>
+                            Submit Review
+                        </button>
+                        </div>
+                    </form>   
+                        </div>
                     </div>
                 </div>
             </div>

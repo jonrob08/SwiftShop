@@ -674,3 +674,29 @@ footer .input-group-text {
   background-color: var(--color-quaternary);
   padding: 30px
 }
+
+/* Product Page */
+.review-inner-wrapper {
+  background-color: var(--color-quaternary);
+  padding: 30px;
+}
+
+.review-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+}
+
+.review-header h4 {
+  font-size: 18px;
+  color: var(--color-secondary)
+}
+
+.review-header p, .review-header a {
+  font-size: 14px;
+  color: var(--color-primary)
+}
+
+.review-form h4 {
+  font-size: 16px;
+  color: var(--color-secondary)
+}
