@@ -674,3 +674,133 @@ footer .input-group-text {
   background-color: var(--color-quaternary);
   padding: 30px
 }
+
+/* Product Page */
+.description-wrapper h4, .reviews-wrapper h4 {
+  font-size: 26px;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.description-wrapper p {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.review-inner-wrapper {
+  background-color: var(--color-quaternary);
+  padding: 30px;
+}
+
+.review-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+}
+
+.review-header h4 {
+  font-size: 18px;
+  color: var(--color-secondary)
+}
+
+.review-header p, .review-header a {
+  font-size: 14px;
+  color: var(--color-primary)
+}
+
+.review-form h4 {
+  font-size: 16px;
+  color: var(--color-secondary)
+}
+
+.review-form {
+  border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.review:not(:last-child) {
+  border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.main-product-image {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.main-product-image > div {
+  border: 1px solid var(--color-primary);
+}
+
+.main-product-image img {
+  width: 100% !important;
+  height: 500px !important;
+}
+
+.main-product-image .js-image-zoom__zoomed-image {
+  left: 50px !important;
+  /* padding: 10px; */
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+}
+
+.secondary-product-image {
+  padding: 20px;
+}
+
+.secondary-product-image > div {
+  padding: 20px;
+  width: 48%;
+  border: 1px solid var(--color-primary);
+}
+
+.main-product-details {
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.border-btm {
+  border-bottom:  1px solid rgba(0, 0, 0, 0.25);
+}
+
+.main-product-details h3.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.main-product-details p.price {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.main-product-details a.detail-link {
+  font-size: 14px;
+  color: var(--color-quinary);
+}
+
+.main-product-details a.review-btn, .review-txt {
+  color: var(--color-quinary);
+  font-size: 13px;
+}
+
+.product-heading {
+  font-size: 14px;
+  color: var(--color-primary);
+  margin-bottom: 0px;
+
+}
+
+.product-data {
+  font-size: 13px;
+  color: var(--color-secondary);
+  margin-bottom: 0px;
+
+}
