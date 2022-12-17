@@ -611,3 +611,11 @@ footer .input-group-text {
   padding: 10px 0px;
   border-top: 1px solid var(--color-primary);
 }
+
+/* Login */
+.login-card {
+  padding: 20px;
+  background-color: var(--color-quaternary);
+  width: 500px;
+  margin: 30px auto;
+}
