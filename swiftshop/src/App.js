@@ -12,7 +12,11 @@ import {
   Login, Signup, 
   ForgotPassword, 
   ResetPassword,
-  Article 
+  Article,
+  PrivacyPolicy,
+  RefundPolicy,
+  ShippingPolicy,
+  TermsAndConditions
 } from './pages';
 
 function App() {
@@ -32,6 +36,10 @@ function App() {
           <Route path="signup" element={<Signup />}/>
           <Route path="forgot" element={<ForgotPassword />}/>
           <Route path="reset" element={<ResetPassword />}/>
+          <Route path="privacy" element={<PrivacyPolicy />}/>
+          <Route path="refund" element={<RefundPolicy />}/>
+          <Route path="shipping" element={<ShippingPolicy />}/>
+          <Route path="tandc" element={<TermsAndConditions />}/>
         </Route>
       </Routes>
     </BrowserRouter>
