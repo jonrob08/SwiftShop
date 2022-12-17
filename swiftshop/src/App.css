@@ -668,3 +668,9 @@ footer .input-group-text {
   background-color: var(--color-quinary);
   color: var(--color-primary);
 }
+
+/* Policy Pages */
+.policy {
+  background-color: var(--color-quaternary);
+  padding: 30px
+}
