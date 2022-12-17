@@ -1,4 +1,5 @@
 import About from "./About";
+import Article from "./Article";
 import Blog from "./Blog";
 import Cart from "./Cart";
 import Compare from "./Compare";
@@ -13,6 +14,7 @@ import Wishlist from "./Wishlist"
 
 export {
     About,
+    Article,
     Blog,
     Cart,
     Compare,

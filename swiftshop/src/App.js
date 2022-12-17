@@ -2,7 +2,18 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout';
-import { Home, Store, Blog, Contact, Compare, Wishlist, Login, Signup, ForgotPassword, ResetPassword } from './pages';
+import { 
+  Home,
+  Store, 
+  Blog, 
+  Contact, 
+  Compare, 
+  Wishlist, 
+  Login, Signup, 
+  ForgotPassword, 
+  ResetPassword,
+  Article 
+} from './pages';
 
 function App() {
   return (
@@ -13,6 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="store" element={<Store />}/>
           <Route path="blog" element={<Blog />}/>
+          <Route path="blog/:id" element={<Article />}/>
           <Route path="contact" element={<Contact />}/>
           <Route path="compare" element={<Compare />}/>
           <Route path="wishlist" element={<Wishlist />}/>
