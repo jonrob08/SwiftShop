@@ -676,6 +676,17 @@ footer .input-group-text {
 }
 
 /* Product Page */
+.description-wrapper h4, .reviews-wrapper h4 {
+  font-size: 26px;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.description-wrapper p {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
 .review-inner-wrapper {
   background-color: var(--color-quaternary);
   padding: 30px;

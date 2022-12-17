@@ -24,8 +24,8 @@ const Product = () => {
         <div className="container-xxl">
             <div className="row">
                 <div className="col-12">
-                    <div className="bg-white p-3">
-                        <h4>Description</h4>
+                    <h4>Description</h4>
+                    <div className="p-3 bg-white">
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis, neque sit amet lacinia suscipit, odio nisl vulputate nisi, eget eleifend libero metus ac lacus. Maecenas tempus eget lacus id porta. Proin a elit augue. Etiam ipsum est, tempus quis velit id, vehicula molestie felis. Nulla placerat arcu quis dolor rutrum ultrices. 
                         </p>
@@ -34,10 +34,11 @@ const Product = () => {
             </div>
         </div>
       </section>
-      <section className="reviews-wrapper py-5">
+      <section className="reviews-wrapper pt-3">
         <div className="container-xxl">
             <div className="row">
                 <div className="col-12">
+                <h4>Reviews</h4>
                     <div className="review-inner-wrapper">
                         <div className="review-header d-flex justify-content-between align-items-end">
                             <div>
