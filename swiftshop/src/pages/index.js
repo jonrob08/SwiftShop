@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import ForgotPassword from "./ForgotPassword";
 import Home from "./Home";
 import Login from "./Login";
+import ResetPassword from "./ResetPassword";
 import Signup from "./Signup";
 import Store from "./Store";
 import Wishlist from "./Wishlist"
@@ -19,6 +20,7 @@ export {
     ForgotPassword,
     Home,
     Login,
+    ResetPassword,
     Signup,
     Store,
     Wishlist

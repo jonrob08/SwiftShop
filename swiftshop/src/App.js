@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout';
-import { Home, Store, Blog, Contact, Compare, Wishlist, Login, Signup, ForgotPassword, } from './pages';
+import { Home, Store, Blog, Contact, Compare, Wishlist, Login, Signup, ForgotPassword, ResetPassword } from './pages';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="login" element={<Login />}/>
           <Route path="signup" element={<Signup />}/>
           <Route path="forgot" element={<ForgotPassword />}/>
+          <Route path="reset" element={<ResetPassword />}/>
         </Route>
       </Routes>
     </BrowserRouter>
