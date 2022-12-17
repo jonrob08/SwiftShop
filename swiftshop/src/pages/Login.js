@@ -22,10 +22,12 @@ const Login = () => {
                   <input type="password" name='password' placeholder='Password' className="form-control" />
                 </div> 
                 <div>
-                  <Link to="/forgot" className='text-dark'>Forgot Password?</Link>
-                  <div className='d-flex justify content-center gap-15 align-items-center'>
+                  <div className='d-flex justify-content-center gap-15 align-items-center'>
                     <button className='button border-0' type='submit'>Login</button>
-                    <Link className='button signup'>Signup</Link>
+                    <Link to="/signup" className='button signup'>Signup</Link>
+                  </div>
+                  <div className='d-flex justify-content-center gap-15 align-items-center mt-4'>
+                    <Link to="/forgot" className='text-dark'>Forgot Password?</Link>
                   </div>
                 </div>
               </form>

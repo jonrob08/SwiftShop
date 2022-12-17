@@ -22,7 +22,7 @@ const ForgotPassword = () => {
                 </div> 
                 <div>
                  
-                  <div className='d-flex justify content-center flex-column gap-15 align-items-center'>
+                  <div className='d-flex justify-content-center flex-column gap-15 align-items-center'>
                     <button className='button border-0' type='submit'>Submit</button>
                     <Link to="/login" className='text-dark'>Cancel</Link>
                   </div>
