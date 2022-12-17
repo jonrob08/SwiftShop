@@ -4,6 +4,7 @@ import ReactImageZoom from 'react-image-zoom';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ProductCard from '../components/ProductCard'
+import Color from '../components/Color'
 
 const Product = () => {
   const title = "Dynamic Product Name";
@@ -60,21 +61,48 @@ const Product = () => {
                             <a className="review-btn" href="#review">Write A Review</a>
                         </div>
                         <div className="border-btm py-3">
-                            <div className="d-flex ap-10 align-items-center my-2">
-                                <h3 className="product-heading">ABC :</h3>
-                                <p className="product-data">dfwdf</p>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">Type:</h3>
+                                <p className="product-data">Watch</p>
                             </div>
-                            <div className="d-flex ap-10 align-items-center my-2">
-                                <h3 className="product-heading">ABC :</h3>
-                                <p className="product-data">dfwdf</p>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">Brand:</h3>
+                                <p className="product-data">Movado</p>
                             </div>
-                            <div className="d-flex ap-10 align-items-center my-2">
-                                <h3 className="product-heading">ABC :</h3>
-                                <p className="product-data">dfwdf</p>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">Category:</h3>
+                                <p className="product-data">Watch</p>
                             </div>
-                            <div className="d-flex ap-10 align-items-center my-2">
-                                <h3 className="product-heading">ABC :</h3>
-                                <p className="product-data">dfwdf</p>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">Tags:</h3>
+                                <p className="product-data">Watch, Mobile</p>
+                            </div>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">SKU:</h3>
+                                <p className="product-data">123414</p>
+                            </div>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">Availability:</h3>
+                                <p className="product-data">In stock</p>
+                            </div>
+                            <div className="d-flex gap-10 flex-column mt-2 mb-3">
+                                <h3 className="product-heading">Size</h3>
+                                <div className="d-flex flex-wrap gap-15">
+                                    <span className="badge border border-1 bg-white text-dark border-secondary">S</span>
+                                    <span className="badge border border-1 bg-white text-dark border-secondary">M</span>
+                                    <span className="badge border border-1 bg-white text-dark border-secondary">L</span>
+                                    <span className="badge border border-1 bg-white text-dark border-secondary">XL</span>
+                                </div>
+                            </div>
+                            <div className="d-flex gap-10 flex-column mt-2 mb-3">
+                                <h3 className="product-heading">Color</h3>
+                                <Color />
+                            </div>
+                            <div className="d-flex gap-10 flex-column mt-2 mb-3">
+                                <h3 className="product-heading">Quantity</h3>
+                                <div>
+                                    <input type="number" className="form-control" min={1} max={10} style={{"width": "60px"}} />
+                                </div>
                             </div>
                         </div>
                     </div>
