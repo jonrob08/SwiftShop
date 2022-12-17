@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
+import { Link } from "react-router-dom";
 import ReactImageZoom from 'react-image-zoom';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ProductCard from '../components/ProductCard'
 import Color from '../components/Color'
+import { GoChecklist } from "react-icons/go"
+import { BiGitCompare } from "react-icons/bi";
+
 
 const Product = () => {
   const title = "Dynamic Product Name";
   const [productBought, setProductBought] = useState(true)
-  const props = {width: 500, zoomWidth: 500, zoomStyle: ' opacity: 0.7', img: "https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660"};
+  const props = {width: 500, zoomWidth: 500, zoomStyle: 'opacity: 0.9', zoomPosition: 'original', img: "https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660", };
 
   return (
     <>
@@ -86,7 +90,7 @@ const Product = () => {
                                 <p className="product-data">In stock</p>
                             </div>
                             <div className="d-flex gap-10 flex-column mt-2 mb-3">
-                                <h3 className="product-heading">Size</h3>
+                                <h3 className="product-heading">Size:</h3>
                                 <div className="d-flex flex-wrap gap-15">
                                     <span className="badge border border-1 bg-white text-dark border-secondary">S</span>
                                     <span className="badge border border-1 bg-white text-dark border-secondary">M</span>
@@ -95,14 +99,34 @@ const Product = () => {
                                 </div>
                             </div>
                             <div className="d-flex gap-10 flex-column mt-2 mb-3">
-                                <h3 className="product-heading">Color</h3>
+                                <h3 className="product-heading">Color:</h3>
                                 <Color />
                             </div>
-                            <div className="d-flex gap-10 flex-column mt-2 mb-3">
-                                <h3 className="product-heading">Quantity</h3>
+                            <div className="d-flex gap-15 flex-row align-items-center mt-2 mb-3">
+                                <h3 className="product-heading">Quantity:</h3>
                                 <div>
                                     <input type="number" className="form-control" min={1} max={10} style={{"width": "60px"}} />
                                 </div>
+                                <div className="d-flex align-items-center gap-30 ms-5">
+                                    <button className='button border-0' type='submit'>Add To Cart</button>
+                                    <Link to="/signup" className='button signup'>Buy It Now!</Link>
+                                </div>
+                            </div>
+                            <div className="d-flex gap-15 align-items-center">
+                                <div>
+                                    <a href="" className="detail-link"><BiGitCompare className="fs-5 me-2"/>Add to Compare List</a>
+                                </div>
+                                <div>
+                                    <a href="" className="detail-link"><GoChecklist className="fs-5 me-2"/>Add to Wishlist</a>
+                                </div>
+                            </div>
+                            <div className="d-flex gap-10 align-items-center my-2">
+                                <h3 className="product-heading">Shipping & Returns</h3>
+                                <p className="product-data">Free shipping and returns available on all orders! <br /> Please allow <b>5-10 business days</b> for your order</p>
+                            </div>
+                            <div className="d-flex gap-10 align-items-center my-3">
+                                <h3 className="product-heading">Shipping & Returns</h3>
+                                <p className="product-data">Free shipping and returns available on all orders! <br /> Please allow <b>5-10 business days</b> for your order</p>
                             </div>
                         </div>
                     </div>

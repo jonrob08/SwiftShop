@@ -742,9 +742,9 @@ footer .input-group-text {
 }
 
 .main-product-image .js-image-zoom__zoomed-image {
-  left: 230px !important;
+  left: 50px !important;
   /* padding: 10px; */
-  background-color: var(--color-quinary);
+  background-color: var(--color-tertiary);
   border-radius: 10px;
 }
 
@@ -759,7 +759,7 @@ footer .input-group-text {
 }
 
 .main-product-details {
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 10px;
 }
 
@@ -781,6 +781,11 @@ footer .input-group-text {
   margin-top: 10px;
 }
 
+.main-product-details a.detail-link {
+  font-size: 14px;
+  color: var(--color-quinary);
+}
+
 .main-product-details a.review-btn, .review-txt {
   color: var(--color-quinary);
   font-size: 13px;
@@ -790,6 +795,7 @@ footer .input-group-text {
   font-size: 14px;
   color: var(--color-primary);
   margin-bottom: 0px;
+
 }
 
 .product-data {
