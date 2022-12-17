@@ -16,7 +16,8 @@ import {
   PrivacyPolicy,
   RefundPolicy,
   ShippingPolicy,
-  TermsAndConditions
+  TermsAndConditions,
+  Product
 } from './pages';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="store" element={<Store />}/>
+          <Route path="product/:id" element={<Product />}/>
           <Route path="blog" element={<Blog />}/>
           <Route path="blog/:id" element={<Article />}/>
           <Route path="contact" element={<Contact />}/>
