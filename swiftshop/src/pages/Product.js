@@ -8,7 +8,7 @@ import ProductCard from '../components/ProductCard'
 const Product = () => {
   const title = "Dynamic Product Name";
   const [productBought, setProductBought] = useState(true)
-  const props = {width: 600, zoomWidth: 900, zoomStyle: ' opacity: 0.7', img: "https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660"};
+  const props = {width: 500, zoomWidth: 500, zoomStyle: ' opacity: 0.7', img: "https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660"};
 
   return (
     <>
@@ -38,7 +38,47 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-6"></div>
+                <div className="col-6">
+                    <div className="main-product-details">
+                        <div className="border-btm">
+                            <h3 className="title">Mavado Watch for Men, Luxury Timepiece</h3>
+                        </div>
+                        <div className="border-btm py-3">
+                            <p className="price">$100</p>
+                            <div className="d-flex align-items-center gap-10">
+                            <div>
+                                    <ReactStars 
+                                        count={5} 
+                                        size={24} 
+                                        value="3" 
+                                        edit={false} 
+                                        activeColor='#ffd700'
+                                    />
+                                </div>
+                                <p className="mb-0 review-txt">(2 reviews)</p>
+                            </div>
+                            <a className="review-btn" href="#review">Write A Review</a>
+                        </div>
+                        <div className="border-btm py-3">
+                            <div className="d-flex ap-10 align-items-center my-2">
+                                <h3 className="product-heading">ABC :</h3>
+                                <p className="product-data">dfwdf</p>
+                            </div>
+                            <div className="d-flex ap-10 align-items-center my-2">
+                                <h3 className="product-heading">ABC :</h3>
+                                <p className="product-data">dfwdf</p>
+                            </div>
+                            <div className="d-flex ap-10 align-items-center my-2">
+                                <h3 className="product-heading">ABC :</h3>
+                                <p className="product-data">dfwdf</p>
+                            </div>
+                            <div className="d-flex ap-10 align-items-center my-2">
+                                <h3 className="product-heading">ABC :</h3>
+                                <p className="product-data">dfwdf</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </div>
@@ -82,7 +122,7 @@ const Product = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="review-form py-4">
+                        <div id="review" className="review-form py-4">
                             <h4>Write a Review</h4>
                             <form action="" className='d-flex flex-column gap-15'>
                             <div>
