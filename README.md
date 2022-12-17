@@ -32,7 +32,7 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
  # Steps to create front end
    Run these commands: 
     - npx create-react-app swiftshop --template redux
-    - npm i react-icons react-router-dom react-fast-marquee react-rating-stars-component react-helmet
+    - npm i react-icons react-router-dom react-fast-marquee react-rating-stars-component react-helmet react-image-zoom
 # What Are These Packages For? 
   1. React Icons is a library of icons that I can use for my app
     - https://react-icons.github.io/react-icons/
@@ -48,6 +48,9 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
 
   5. React Helmet is pretty common in React apps with lots of pages as well, I'm using it because I want different titles in the head component of the app whenever the user moves pages. React-helmet overrides the index/site-level description meta tag and renders the lower-level one, so you can also change meta tags in each page if you're trying to level up your SEO.
     - https://www.npmjs.com/package/react-helmet
+  
+  6. React image zoom is a very helpful package that allows image zooming on hover. I'll be using this to add some flair to the product page, zooming in on a product is a basically a staple on e-commerce websites, so this package is how I'll be implementing that functionality. 
+    - http://malaman.github.io/react-image-zoom/example/index.html
 
 ## Dev Notes
 ### Bugs To Fix

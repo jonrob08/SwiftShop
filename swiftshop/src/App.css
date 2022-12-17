@@ -725,3 +725,28 @@ footer .input-group-text {
   font-size: 14px;
   color: var(--color-primary);
 }
+
+.main-product-image {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.main-product-image > div {
+  border: 1px solid var(--color-primary);
+}
+
+.main-product-image img {
+  width: 100% !important;
+  height: 500px !important;
+}
+
+.secondary-product-image {
+  padding: 20px;
+}
+
+.secondary-product-image > div {
+  padding: 20px;
+  width: 48%;
+  border: 1px solid var(--color-primary);
+}

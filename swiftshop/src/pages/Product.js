@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
+import ReactImageZoom from 'react-image-zoom';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ProductCard from '../components/ProductCard'
@@ -7,6 +8,7 @@ import ProductCard from '../components/ProductCard'
 const Product = () => {
   const title = "Dynamic Product Name";
   const [productBought, setProductBought] = useState(true)
+  const props = {width: 600, zoomWidth: 900, zoomStyle: ' opacity: 0.7', img: "https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660"};
 
   return (
     <>
@@ -15,7 +17,27 @@ const Product = () => {
       <div className="main-product-wrapper py-5">
         <div className="container-xxl">
             <div className="row">
-                <div className="col-6"></div>
+                <div className="col-6">
+                    <div className="main-product-image">
+                        <div>
+                        <ReactImageZoom {...props} />
+                        </div>
+                    </div>
+                    <div className="secondary-product-image d-flex flex-wrap gap-15">
+                        <div>
+                            <img src="https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660" className="img-fluid" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660" className="img-fluid" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660" className="img-fluid" alt="" />
+                        </div>
+                        <div>
+                            <img src="https://www.movado.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwcdf1f552/images/products/3640002w_LRG_rgb_Web.png?sw=1660&sh=1660" className="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
                 <div className="col-6"></div>
             </div>
         </div>
