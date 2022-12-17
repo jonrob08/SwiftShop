@@ -577,13 +577,13 @@ footer .input-group-text {
 }
 
 /* Compare Products */
-.compare-product-card {
+.compare-product-card, .wishlist-card {
   padding: 20px 15px;
   background-color: var(--color-secondary);
   border-radius: 10px;
 }
 
-.compare-product-card .cross {
+.compare-product-card .cross, .wishlist-card .cross {
   top: 15px;
   right: 15px;
   width: 25px;
@@ -591,14 +591,14 @@ footer .input-group-text {
   cursor: pointer;
 }
 
-.compare-product-details h5.title {
+.compare-product-details h5.title, .wishlist-card h5.title {
   font-size: 15px;
   line-height: 22px;
   font-weight: 500;
   color: var(--color-quaternary);
 }
 
-.compare-product-details h6.price {
+.compare-product-details h6.price, .wishlist-card h6.price {
   font-size: 15px;
   line-height: 22px;
   font-weight: 400;
