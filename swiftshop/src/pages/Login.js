@@ -13,12 +13,12 @@ const Login = () => {
         <div className="row">
           <div className="col-12">
             <div className="login-card">
-              <h3>Login</h3>
-              <form action="">
+              <h3 className='text-center mb-3'>Login</h3>
+              <form action="" className='d-flex flex-column gap-15'>
                 <div>
                   <input type="email" name='email' placeholder='Email' className="form-control" />
                 </div> 
-                <div>
+                <div className='mt-3'>
                   <input type="password" name='password' placeholder='Password' className="form-control" />
                 </div> 
                 <div>
