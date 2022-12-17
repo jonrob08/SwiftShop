@@ -10,7 +10,8 @@ const Signup = () => {
       <Meta title={title} />
       <BreadCrumb title={title} /> 
       <div className="login-wrapper py-5">
-        <div className="row">
+      <div className="container-xxl">
+      <div className="row">
           <div className="col-12">
             <div className="login-card">
               <h3 className='text-center mb-3'>Sign Up</h3>
@@ -34,6 +35,7 @@ const Signup = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )

@@ -11,7 +11,8 @@ const ForgotPassword = () => {
       <Meta title={title} />
       <BreadCrumb title={title} /> 
       <div className="login-wrapper py-5">
-        <div className="row">
+      <div className="container-xxl">
+      <div className="row">
           <div className="col-12">
             <div className="login-card">
               <h3 className='text-center mb-3'>Reset Your Password</h3>
@@ -31,6 +32,7 @@ const ForgotPassword = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )
