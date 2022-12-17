@@ -700,3 +700,17 @@ footer .input-group-text {
   font-size: 16px;
   color: var(--color-secondary)
 }
+
+.review-form {
+  border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.review:not(:last-child) {
+  border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+  font-size: 14px;
+  color: var(--color-primary);
+}

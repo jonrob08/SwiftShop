@@ -59,7 +59,7 @@ const Product = () => {
                                 </div>
                             )}
                         </div>
-                        <div className="review-form">
+                        <div className="review-form py-4">
                             <h4>Write a Review</h4>
                             <form action="" className='d-flex flex-column gap-15'>
                             <div>
@@ -83,6 +83,27 @@ const Product = () => {
                         </div>
                     </form>   
                         </div>
+                        <div className="review-list mt-3">
+                            <div className="review">
+                                <div className="d-flex gap-10 align-items-center">
+                                                                
+                                <div>
+                                <h6 className="mb-0">John</h6>
+                                <ReactStars 
+                                    count={5} 
+                                    size={24} 
+                                    value="3" 
+                                    edit={false} 
+                                    activeColor='#ffd700'
+                                />
+                                <p className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis, neque sit amet lacinia suscipit,
+                                </p>
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
