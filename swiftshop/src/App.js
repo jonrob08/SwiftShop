@@ -18,7 +18,10 @@ import {
   ShippingPolicy,
   TermsAndConditions,
   Product,
-  Cart
+  Cart,
+  Checkout,
+  Shipping,
+  Payment
 } from './pages';
 
 function App() {
@@ -33,6 +36,9 @@ function App() {
           <Route path="blog" element={<Blog />}/>
           <Route path="blog/:id" element={<Article />}/>
           <Route path="cart" element={<Cart />}/>
+          <Route path="checkout" element={<Checkout />}/>
+          <Route path="shipping" element={<Shipping />}/>
+          <Route path="payment" element={<Payment />}/>
           <Route path="contact" element={<Contact />}/>
           <Route path="compare" element={<Compare />}/>
           <Route path="wishlist" element={<Wishlist />}/>
@@ -40,9 +46,9 @@ function App() {
           <Route path="signup" element={<Signup />}/>
           <Route path="forgot" element={<ForgotPassword />}/>
           <Route path="reset" element={<ResetPassword />}/>
-          <Route path="privacy" element={<PrivacyPolicy />}/>
-          <Route path="refund" element={<RefundPolicy />}/>
-          <Route path="shipping" element={<ShippingPolicy />}/>
+          <Route path="privacy-policy" element={<PrivacyPolicy />}/>
+          <Route path="refund-policy" element={<RefundPolicy />}/>
+          <Route path="shipping-policy" element={<ShippingPolicy />}/>
           <Route path="tandc" element={<TermsAndConditions />}/>
         </Route>
       </Routes>
