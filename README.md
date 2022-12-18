@@ -29,11 +29,11 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
 ### Contact Us
  ![](./swiftshop/public/images/wireframes/contact.png)
 
- # Steps to create front end
+# Steps to create front end
    Run these commands: 
     - npx create-react-app swiftshop --template redux
     - npm i react-icons react-router-dom react-fast-marquee react-rating-stars-component react-helmet react-image-zoom
-# What Are These Packages For? 
+## What Are These Packages For? 
   1. React Icons is a library of icons that I can use for my app
     - https://react-icons.github.io/react-icons/
 
@@ -52,6 +52,12 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
   6. React image zoom is a very helpful package that allows image zooming on hover. I'll be using this to add some flair to the product page, zooming in on a product is a basically a staple on e-commerce websites, so this package is how I'll be implementing that functionality. 
     - http://malaman.github.io/react-image-zoom/example/index.html
 
+# Steps to create back end
+  Run these commands: 
+  - npm init -y
+  - mkdir config controller middleware models routes
+  - touch index.js
+  - npm i express mongoose bcrypt body-parser dotenv
 ## Dev Notes
 ### Bugs To Fix
   1. On the login, signup, and forgot password page there is a horizontal scroll wheel. Double check CSS here. 
