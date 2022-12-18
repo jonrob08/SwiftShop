@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import {AiFillDelete} from 'react-icons/ai'
@@ -27,9 +28,9 @@ const Cart = () => {
                     <img src={Watch} className='img-fluid' alt="product image" />
                   </div>
                   <div className='w-75'>
-                    <h5 className='title'>Title</h5>
-                    <p className='color'>Blue</p>
-                    <p className='size'>Large</p>
+                    <p>Dynamic Product Title</p>
+                    <p>Color: Blue</p>
+                    <p>Size: Large</p>
                   </div>
                 </div>
                 <div className='cart-col-2'>
@@ -61,9 +62,9 @@ const Cart = () => {
                     <img src={Watch} className='img-fluid' alt="product image" />
                   </div>
                   <div className='w-75'>
-                    <h5 className='title'>Dynamic Product Title</h5>
-                    <p className='color'>Color: Blue</p>
-                    <p className='size'>Size: Large</p>
+                    <p>Dynamic Product Title</p>
+                    <p>Color: Blue</p>
+                    <p>Size: Large</p>
                   </div>
                 </div>
                 <div className='cart-col-2'>
@@ -88,6 +89,16 @@ const Cart = () => {
                 <h5 className='price'>$999.99</h5>
 
                 </div>
+              </div>
+            </div>
+            <div className="col-12 py-2 mt-4">
+              <div className="d-flex justify-content-between align-items-baseline">
+              <Link to="/store" className="button">Continue Shopping</Link>
+              <div className='d-flex flex-column align-items-end'>
+                <h4>Subtotal: $1998.99</h4>
+                <p>Taxes and Shipping are calculated at checkout (eventually)</p>
+                <Link className='button'>Checkout</Link>
+              </div>
               </div>
             </div>
           </div>

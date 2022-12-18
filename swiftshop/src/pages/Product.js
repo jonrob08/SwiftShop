@@ -108,8 +108,8 @@ const Product = () => {
                                     <input type="number" className="form-control" min={1} max={10} style={{"width": "60px"}} />
                                 </div>
                                 <div className="d-flex align-items-center gap-30 ms-5">
-                                    <button className='button border-0' type='submit'>Add To Cart</button>
-                                    <Link to="/signup" className='button signup'>Buy It Now!</Link>
+                                    <Link to="/cart" className='button border-0'>Add To Cart</Link>
+                                    <Link to="/cart" className='button signup'>Buy It Now!</Link>
                                 </div>
                             </div>
                             <div className="d-flex gap-15 align-items-center">
