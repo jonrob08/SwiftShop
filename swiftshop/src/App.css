@@ -841,3 +841,14 @@ footer .input-group-text {
 .cart-col-4 {
   width: 15%
 }
+
+/* Checkout */
+.total {
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.total-price {
+  font-size: 16px;
+  color: var(--color-quinary);
+}
