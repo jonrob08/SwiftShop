@@ -8,6 +8,7 @@ import ProductCard from '../components/ProductCard'
 import Color from '../components/Color'
 import { GoChecklist } from "react-icons/go"
 import { BiGitCompare } from "react-icons/bi";
+import { Container } from "../components";
 
 
 const Product = () => {
@@ -19,8 +20,7 @@ const Product = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} />
-      <div className="main-product-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="main-product-wrapper py-5">
             <div className="row">
                 <div className="col-6">
                     <div className="main-product-image">
@@ -132,10 +132,8 @@ const Product = () => {
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
-      <section className="description-wrapper py-5">
-        <div className="container-xxl">
+      </Container>
+      <Container class1="description-wrapper py-5">
             <div className="row">
                 <div className="col-12">
                     <h4>Description</h4>
@@ -146,10 +144,8 @@ const Product = () => {
                     </div>
                 </div>
             </div>
-        </div>
-      </section>
-      <section className="reviews-wrapper pt-3">
-        <div className="container-xxl">
+      </Container>
+      <Container class1="reviews-wrapper pt-3">
             <div className="row">
                 <div className="col-12">
                 <h4>Reviews</h4>
@@ -222,10 +218,8 @@ const Product = () => {
                     </div>
                 </div>
             </div>
-        </div>
-      </section>
-      <section className="popular-wrapper py-5">
-        <div className="container-xxl">
+      </Container>
+      <Container class1="popular-wrapper py-5">
           <div className="row">
           <div className="col-12">
             <h3 className="section-heading">Our Most Popular Products</h3>
@@ -237,8 +231,7 @@ const Product = () => {
             <ProductCard />
             <ProductCard />
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   );
 };

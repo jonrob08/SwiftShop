@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Container } from '../components';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 
@@ -9,8 +10,7 @@ const Login = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} /> 
-      <div className="login-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="login-wrapper py-5">
           <div className="row">
             <div className="col-12">
               <div className="login-card">
@@ -35,8 +35,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   )
 }

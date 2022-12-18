@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from '../components';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import { Cross, Watch, } from '../images';
@@ -9,8 +10,7 @@ const Wishlist = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} /> 
-      <div className="wishlist-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="wishlist-wrapper py-5">
           <div className="row">
             <div className="col-3">
               <div className="wishlist-card position-relative">
@@ -49,8 +49,7 @@ const Wishlist = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   )
 }

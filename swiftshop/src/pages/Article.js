@@ -4,6 +4,7 @@ import { HiOutlineArrowLeft } from 'react-icons/hi'
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import { Blog1 } from '../images';
+import { Container } from '../components';
 
 const Article = () => {
     const title = "Dynamic Blog Name"
@@ -11,8 +12,7 @@ const Article = () => {
         <>
             <Meta title={title} />
             <BreadCrumb title={title} /> 
-            <div className="blog-wrapper py-5">
-        <div className="container-xxl">
+            <Container class1="blog-wrapper py-5">
             <div className="row">
                 <div className="col-12">
                  <div className="article-card">
@@ -28,8 +28,7 @@ const Article = () => {
                  </div>
                 </div>
             </div>
-        </div>
-      </div>
+      </Container>
         </>
     )
 }

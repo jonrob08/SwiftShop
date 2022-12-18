@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from '../components';
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 
@@ -8,8 +9,7 @@ const RefundPolicy = () => {
     <>
         <Meta title={title} />
         <BreadCrumb title={title} /> 
-        <section className="policy-wrapper py-5">
-        <div className="container-xxl">
+        <Container class1="policy-wrapper py-5">
           <div className="row">
             <div className="col-12">
                 <div className="policy">
@@ -22,8 +22,7 @@ const RefundPolicy = () => {
                 </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   )
 }

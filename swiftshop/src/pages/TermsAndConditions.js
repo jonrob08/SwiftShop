@@ -1,6 +1,7 @@
 import React from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
+import { Container } from "../components";
 
 const TermsAndConditions = () => {
   const title = "Terms & Conditions";
@@ -8,8 +9,7 @@ const TermsAndConditions = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} />
-      <section className="policy-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="policy-wrapper py-5">
           <div className="row">
             <div className="col-12">
                 <div className="policy">
@@ -22,8 +22,7 @@ const TermsAndConditions = () => {
                 </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   );
 };

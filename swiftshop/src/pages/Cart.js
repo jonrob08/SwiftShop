@@ -5,6 +5,7 @@ import Meta from "../components/Meta";
 import {AiFillDelete} from 'react-icons/ai'
 
 import { Watch } from '../images';
+import { Container } from '../components';
 
 const Cart = () => {
     const title = "Cart"
@@ -12,8 +13,7 @@ const Cart = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} /> 
-      <section className="cart-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="cart-wrapper py-5">
           <div className="row">
             <div className="col-12">
               <div className="cart-header py-3 d-flex justify-content-between align-items-center">
@@ -102,8 +102,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   )
 }

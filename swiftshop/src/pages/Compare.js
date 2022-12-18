@@ -3,6 +3,7 @@ import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import Color from '../components/Color';
 import { Cross, Watch } from '../images';
+import { Container } from '../components';
 
 const Compare = () => {
     const title = "Compare Products"
@@ -10,8 +11,7 @@ const Compare = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} />
-      <div className="compare-product-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="compare-product-wrapper py-5">
             <div className="row">
                 <div className="col-3">
                     <div className="compare-product-card position-relative">
@@ -100,8 +100,7 @@ const Compare = () => {
                     </div>
                 </div>
             </div>
-        </div>
-      </div>
+      </Container>
     </>
   )
 }

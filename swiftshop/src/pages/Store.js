@@ -6,6 +6,7 @@ import Meta from "../components/Meta";
 import ProductCard from '../components/ProductCard'
 import Color from "../components/Color";
 import { Watch, Grid, Grid2, Grid3, Grid4 } from "../images";
+import { Container } from "../components";
 
 const Store = () => {
   const title = "Store";
@@ -15,8 +16,7 @@ const Store = () => {
     <>
       <Meta title={title} />
       <BreadCrumb title={title} />
-      <div className="store-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="store-wrapper py-5">
           <div className="row">
             <div className="col-3">
               <div className="filter-card mb-3">
@@ -188,8 +188,7 @@ const Store = () => {
                 </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   );
 };

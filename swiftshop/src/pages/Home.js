@@ -1,12 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  BsTruck,
-  BsGift,
-  BsHeadset,
-  BsCurrencyDollar,
-  BsCreditCard2Back,
-} from "react-icons/bs";
 import Marquee from "react-fast-marquee";
 
 import { Container } from '../components'
@@ -36,6 +29,7 @@ import {
   Brand7,
   Brand8,
 } from "../images";
+import { services } from "../utils/Data";
 
 const Home = () => {
   const title = "Home";
@@ -128,48 +122,24 @@ const Home = () => {
             </div>
       </div>
     </Container>
-      {/* wrapper 2 */}
+      {/* services */}
       <Container class1='home-wrapper-1 py-5'>
           <div className="row">
             <div className="col-12">
               <div className="services d-flex align-items-center justify-content-between">
-                <div className="icon d-flex align-items-center gap-15">
-                  <BsTruck size="50"></BsTruck>
-                  <div>
-                    <h6>Free Shipping</h6>
-                    <p className="mb-0">On all orders over $100</p>
-                  </div>
-                </div>
-                <div className="icon d-flex align-items-center gap-15">
-                  <BsGift size="50"></BsGift>
-                  <div>
-                    <h6>Daily Login Gifts</h6>
-                    <p className="mb-0">Save up to 25% off</p>
-                  </div>
-                </div>
-                <div className="icon d-flex align-items-center gap-15">
-                  <BsHeadset size="50"></BsHeadset>
-                  <div>
-                    <h6>24/7 Live Support</h6>
-                    <p className="mb-0">Shopping experts await your call</p>
-                  </div>
-                </div>
-                <div className="icon d-flex align-items-center gap-15">
-                  <BsCurrencyDollar size="50"></BsCurrencyDollar>
-                  <div>
-                    <h6>Always Affordable</h6>
-                    <p className="mb-0">Price Match Guarantee</p>
-                  </div>
-                </div>
-                <div className="icon d-flex align-items-center gap-15">
-                  <BsCreditCard2Back size="50"></BsCreditCard2Back>
-                  <div>
-                    <h6>Secure Payments</h6>
-                    <p className="mb-0">
-                      Wide variety of secure payment options
-                    </p>
-                  </div>
-                </div>
+                {
+                  services?.map((i, j) => {
+                    return (
+                      <div className="icon d-flex align-items-center gap-15" key={j}>
+                        {i.image}
+                        <div>
+                          <h6>{i.title}</h6>
+                          <p className="mb-0">{i.tagline}</p>
+                        </div>
+                      </div>
+                    )
+                  })
+                }  
               </div>
             </div>
           </div>
