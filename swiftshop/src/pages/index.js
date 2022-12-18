@@ -18,28 +18,28 @@ import ShippingPolicy from "./ShippingPolicy";
 import Signup from "./Signup";
 import Store from "./Store";
 import TermsAndConditions from "./TermsAndConditions";
-import Wishlist from "./Wishlist"
+import Wishlist from "./Wishlist";
 
 export {
-    About,
-    Article,
-    Blog,
-    Cart,
-    Checkout,
-    Compare,
-    Contact,
-    ForgotPassword,
-    Home,
-    Login,
-    Payment,
-    PrivacyPolicy,
-    Product,
-    RefundPolicy,
-    ResetPassword,
-    Shipping,
-    ShippingPolicy,
-    Signup,
-    Store,
-    TermsAndConditions,
-    Wishlist
-}
+  About,
+  Article,
+  Blog,
+  Cart,
+  Checkout,
+  Compare,
+  Contact,
+  ForgotPassword,
+  Home,
+  Login,
+  Payment,
+  PrivacyPolicy,
+  Product,
+  RefundPolicy,
+  ResetPassword,
+  Shipping,
+  ShippingPolicy,
+  Signup,
+  Store,
+  TermsAndConditions,
+  Wishlist,
+};
