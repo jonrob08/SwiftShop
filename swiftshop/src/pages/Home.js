@@ -41,7 +41,10 @@ const Home = () => {
   const title = "Home";
   return (
     <>
-    <Container class1='home-wrapper-1 py-5'>
+
+      <Meta title={title} />
+      {/* wrapper 1 */}
+      <Container class1='home-wrapper-1 py-5'>
       <div className="row">
             <div className="col-6">
               <div className="main-banner position-relative">
@@ -125,16 +128,8 @@ const Home = () => {
             </div>
       </div>
     </Container>
-      <Meta title={title} />
-      {/* wrapper 1 */}
-      <section className="home-wrapper-1 py-5">
-        <div className="container-xxl">
-
-        </div>
-      </section>
       {/* wrapper 2 */}
-      <section className="home-wrapper-2 py-5">
-        <div className="container-xxl">
+      <Container class1='home-wrapper-1 py-5'>
           <div className="row">
             <div className="col-12">
               <div className="services d-flex align-items-center justify-content-between">
@@ -178,12 +173,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
       {/* categories section */}
-      <section className="category-section py-5">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1='category-section py-5'>
+      <div className="row">
             <div className="col-12">
               <div className="categories d-flex justify-content-between flex-wrap align-items-center">
                 <div className="d-flex gap align-items-center">
@@ -245,12 +238,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
+
       {/* featured products */}
-      <section className="featured-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="featured-wrapper py-5">
+      <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Featured Products</h3>
             </div>
@@ -259,12 +251,10 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
           </div>
-        </div>
-      </section>
+      </Container>
       {/* hot selling items */}
-      <section className="hot-sellers">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="hot-sellers">
+      <div className="row">
             <div className="col-3">
               <div className="hot-seller-card position-relative">
                 <img src={SubBanner1} className="img-fluid" alt="hot seller" />
@@ -312,12 +302,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
+
       {/* special products */}
-      <section className="special-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="special-wrapper py-5">
+      <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Specialty Items</h3>
             </div>
@@ -328,12 +317,10 @@ const Home = () => {
             <SpecProduct />
             <SpecProduct />
           </div>
-        </div>
-      </section>
+      </Container>
       {/* popular products */}
-      <section className="popular-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="popular-wrapper py-5">
+      <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Our Most Popular Products</h3>
             </div>
@@ -344,12 +331,10 @@ const Home = () => {
             <ProductCard />
             <ProductCard />
           </div>
-        </div>
-      </section>
+      </Container>
       {/* marquee */}
-      <section className="marquee-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="marquee-wrapper py-5">
+      <div className="row">
             <div className="col-12">
               <div className="marquee-inner-wrapper bg-white p-3">
                 <Marquee className="d-flex">
@@ -381,12 +366,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
       {/* blog wrapper */}
-      <section className="blog-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
+      <Container class1="blog-wrapper py-5">
+      <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Our Latest Blogs</h3>
             </div>
@@ -405,8 +388,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   );
 };
