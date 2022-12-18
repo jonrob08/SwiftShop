@@ -55,7 +55,7 @@ const Product = () => {
                                     <ReactStars 
                                         count={5} 
                                         size={24} 
-                                        value="3" 
+                                        value={3}
                                         edit={false} 
                                         activeColor='#ffd700'
                                     />
@@ -161,7 +161,7 @@ const Product = () => {
                                     <ReactStars 
                                         count={5} 
                                         size={24} 
-                                        value="3" 
+                                        value={3}
                                         edit={false} 
                                         activeColor='#ffd700'
                                     />
@@ -182,7 +182,7 @@ const Product = () => {
                                     <ReactStars 
                                         count={5} 
                                         size={24} 
-                                        value="" 
+                                        value={0}
                                         edit={true} 
                                         activeColor='#ffd700'
                                     />
@@ -207,7 +207,7 @@ const Product = () => {
                                 <ReactStars 
                                     count={5} 
                                     size={24} 
-                                    value="3" 
+                                    value={3}
                                     edit={false} 
                                     activeColor='#ffd700'
                                 />

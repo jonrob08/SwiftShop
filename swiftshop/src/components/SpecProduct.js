@@ -17,7 +17,7 @@ const SpecProduct = () => {
                     <ReactStars 
                         count={5} 
                         size={24} 
-                        value="3" 
+                        value={3}
                         edit={false} 
                         activeColor="#ffd700"
                     />

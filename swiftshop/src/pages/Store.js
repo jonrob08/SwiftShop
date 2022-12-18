@@ -133,7 +133,7 @@ const Store = () => {
                             <h5>
                                 Fantastic Watch you'll always know the time!
                             </h5>
-                            <ReactStars count={5} size={24} value="3" edit={false} activeColor='#ffd700'></ReactStars>
+                            <ReactStars count={5} size={24} value={3} edit={false} activeColor='#ffd700'></ReactStars>
                             <b>$299.99</b>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ const Store = () => {
                             <h5>
                                 Fantastic Watch you'll always know the time!
                             </h5>
-                            <ReactStars count={5} size={24} value="3" edit={false} activeColor='#ffd700'></ReactStars>
+                            <ReactStars count={5} size={24} value={3} edit={false} activeColor='#ffd700'></ReactStars>
                             <b>$299.99</b>
                         </div>
                     </div>

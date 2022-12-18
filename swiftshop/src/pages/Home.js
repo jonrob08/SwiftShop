@@ -1,76 +1,135 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { BsTruck, BsGift, BsHeadset, BsCurrencyDollar, BsCreditCard2Back  } from 'react-icons/bs'
-import Marquee from 'react-fast-marquee'
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  BsTruck,
+  BsGift,
+  BsHeadset,
+  BsCurrencyDollar,
+  BsCreditCard2Back,
+} from "react-icons/bs";
+import Marquee from "react-fast-marquee";
 
-import BlogCard from '../components/BlogCard'
-import ProductCard from '../components/ProductCard'
-import SpecProduct from '../components/SpecProduct'
-import Meta from '../components/Meta'
-import { MainBanner, SmallBanner1, SmallBanner2, SmallBanner3, SmallBanner4, Camera, Tv, Headphone, SubBanner1, SubBanner2, SubBanner3, SubBanner4, Brand1, Brand2, Brand3, Brand4, Brand5, Brand6, Brand7, Brand8} from '../images'
+import { Container } from '../components'
+import BlogCard from "../components/BlogCard";
+import ProductCard from "../components/ProductCard";
+import SpecProduct from "../components/SpecProduct";
+import Meta from "../components/Meta";
+import {
+  MainBanner,
+  SmallBanner1,
+  SmallBanner2,
+  SmallBanner3,
+  SmallBanner4,
+  Camera,
+  Tv,
+  Headphone,
+  SubBanner1,
+  SubBanner2,
+  SubBanner3,
+  SubBanner4,
+  Brand1,
+  Brand2,
+  Brand3,
+  Brand4,
+  Brand5,
+  Brand6,
+  Brand7,
+  Brand8,
+} from "../images";
 
 const Home = () => {
-  const title = "Home"
+  const title = "Home";
   return (
     <>
-      <Meta title={title} />
-      {/* wrapper 1 */}
-      <section className="home-wrapper-1 py-5">
-        <div className="container-xxl">
-          <div className="row">
+    <Container class1='home-wrapper-1 py-5'>
+      <div className="row">
             <div className="col-6">
               <div className="main-banner position-relative">
-                <img src={MainBanner} className='img-fluid rounded-3' alt="main banner" />
+                <img
+                  src={MainBanner}
+                  className="img-fluid rounded-3"
+                  alt="main banner"
+                />
                 <div className="main-banner-content position-absolute">
                   <h4>Long-Lasting Battery Life.</h4>
                   <h4>Noise Cancellation.</h4>
                   <h5>BOSE Alpha</h5>
                   <p>From $999.99 or $74.33/mo.</p>
-                  <Link className='button'>BUY NOW</Link>
+                  <Link className="button">BUY NOW</Link>
                 </div>
               </div>
             </div>
             <div className="col-6">
               <div className="d-flex flex-wrap justify-content-between align-items-center gap-10">
                 <div className="small-banner position-relative">
-                  <img src={SmallBanner1} className='img-fluid rounded-3' alt="small banner 1" />
+                  <img
+                    src={SmallBanner1}
+                    className="img-fluid rounded-3"
+                    alt="small banner 1"
+                  />
                   <div className="small-banner-content position-absolute">
                     <h4>Big Sale</h4>
                     <h4>While supplies last.</h4>
                     <h5>Brand New Laptops</h5>
-                    <p>From $599.99 <br /> or $26.37/mo.</p>
+                    <p>
+                      From $599.99 <br /> or $26.37/mo.
+                    </p>
                   </div>
                 </div>
                 <div className="small-banner position-relative">
-                  <img src={SmallBanner2} className='img-fluid rounded-3' alt="small banner 1" />
+                  <img
+                    src={SmallBanner2}
+                    className="img-fluid rounded-3"
+                    alt="small banner 1"
+                  />
                   <div className="small-banner-content position-absolute">
                     <h4>Water Proof.</h4>
                     <h4>15% Off</h4>
                     <h5>Smart Watches</h5>
-                    <p>Christmas Special <br /> $249.99 or below</p>
+                    <p>
+                      Christmas Special <br /> $249.99 or below
+                    </p>
                   </div>
                 </div>
                 <div className="small-banner position-relative">
-                  <img src={SmallBanner3} className='img-fluid rounded-3' alt="small banner 1" />
+                  <img
+                    src={SmallBanner3}
+                    className="img-fluid rounded-3"
+                    alt="small banner 1"
+                  />
                   <div className="small-banner-content position-absolute">
                     <h4>Long-Lasting Battery Life.</h4>
                     <h4>Noise Cancellation.</h4>
                     <h5>BOSE Alpha</h5>
-                    <p>From $999.99 <br /> or $74.33/mo.</p>
+                    <p>
+                      From $999.99 <br /> or $74.33/mo.
+                    </p>
                   </div>
                 </div>
                 <div className="small-banner position-relative">
-                  <img src={SmallBanner4} className='img-fluid rounded-3' alt="small banner 1" />
+                  <img
+                    src={SmallBanner4}
+                    className="img-fluid rounded-3"
+                    alt="small banner 1"
+                  />
                   <div className="small-banner-content position-absolute">
                     <h4>Long-Lasting Battery Life.</h4>
                     <h4>Noise Cancellation.</h4>
                     <h5>BOSE Alpha</h5>
-                    <p>From $999.99 <br /> or $74.33/mo.</p>
+                    <p>
+                      From $999.99 <br /> or $74.33/mo.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+      </div>
+    </Container>
+      <Meta title={title} />
+      {/* wrapper 1 */}
+      <section className="home-wrapper-1 py-5">
+        <div className="container-xxl">
+
         </div>
       </section>
       {/* wrapper 2 */}
@@ -80,38 +139,40 @@ const Home = () => {
             <div className="col-12">
               <div className="services d-flex align-items-center justify-content-between">
                 <div className="icon d-flex align-items-center gap-15">
-                  <BsTruck size='50'></BsTruck>
+                  <BsTruck size="50"></BsTruck>
                   <div>
                     <h6>Free Shipping</h6>
                     <p className="mb-0">On all orders over $100</p>
                   </div>
                 </div>
                 <div className="icon d-flex align-items-center gap-15">
-                  <BsGift size='50'></BsGift>
+                  <BsGift size="50"></BsGift>
                   <div>
                     <h6>Daily Login Gifts</h6>
                     <p className="mb-0">Save up to 25% off</p>
                   </div>
                 </div>
                 <div className="icon d-flex align-items-center gap-15">
-                  <BsHeadset size='50'></BsHeadset>
-                    <div>
-                      <h6>24/7 Live Support</h6>
-                      <p className="mb-0">Shopping experts await your call</p>
-                    </div>
+                  <BsHeadset size="50"></BsHeadset>
+                  <div>
+                    <h6>24/7 Live Support</h6>
+                    <p className="mb-0">Shopping experts await your call</p>
+                  </div>
                 </div>
                 <div className="icon d-flex align-items-center gap-15">
-                  <BsCurrencyDollar size='50'></BsCurrencyDollar>
+                  <BsCurrencyDollar size="50"></BsCurrencyDollar>
                   <div>
-                      <h6>Always Affordable</h6>
-                      <p className="mb-0">Price Match Guarantee</p>
-                    </div>
+                    <h6>Always Affordable</h6>
+                    <p className="mb-0">Price Match Guarantee</p>
                   </div>
+                </div>
                 <div className="icon d-flex align-items-center gap-15">
-                  <BsCreditCard2Back size='50'></BsCreditCard2Back>
+                  <BsCreditCard2Back size="50"></BsCreditCard2Back>
                   <div>
-                      <h6>Secure Payments</h6>
-                      <p className="mb-0">Wide variety of secure payment options</p>
+                    <h6>Secure Payments</h6>
+                    <p className="mb-0">
+                      Wide variety of secure payment options
+                    </p>
                   </div>
                 </div>
               </div>
@@ -125,56 +186,56 @@ const Home = () => {
           <div className="row">
             <div className="col-12">
               <div className="categories d-flex justify-content-between flex-wrap align-items-center">
-                <div className='d-flex gap align-items-center'>
+                <div className="d-flex gap align-items-center">
                   <div>
                     <h6>Cameras</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Camera} alt="old style camera" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Smart Tv</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Tv} alt="smart television" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Watches</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Headphone} alt="smart watch" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Gaming</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Camera} alt="gaming" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Cameras</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Camera} alt="old style camera" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Smart Tv</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Tv} alt="smart television" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Watches</h6>
                     <p>10 Items</p>
                   </div>
                   <img src={Headphone} alt="smart watch" />
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className="d-flex align-items-center">
                   <div>
                     <h6>Gaming</h6>
                     <p>10 Items</p>
@@ -190,9 +251,9 @@ const Home = () => {
       <section className="featured-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Featured Products</h3>
-          </div>
+            <div className="col-12">
+              <h3 className="section-heading">Featured Products</h3>
+            </div>
             <ProductCard />
             <ProductCard />
             <ProductCard />
@@ -206,41 +267,47 @@ const Home = () => {
           <div className="row">
             <div className="col-3">
               <div className="hot-seller-card position-relative">
-              <img src={SubBanner1} className='img-fluid' alt="hot seller" />
+                <img src={SubBanner1} className="img-fluid" alt="hot seller" />
                 <div className="hot-seller-content position-absolute">
-                <h5>Big Screen</h5>
-                <h6>Smart Watch Series 7</h6>
-                <p>From $399 or $16.62/mo. for 24 mo.*</p>
+                  <h5>Big Screen</h5>
+                  <h6>Smart Watch Series 7</h6>
+                  <p>From $399 or $16.62/mo. for 24 mo.*</p>
                 </div>
               </div>
             </div>
             <div className="col-3">
               <div className="hot-seller-card position-relative">
-              <img src={SubBanner2} className='img-fluid' alt="hot seller" />
+                <img src={SubBanner2} className="img-fluid" alt="hot seller" />
                 <div className="hot-seller-content position-absolute">
-                <h5 className='text-dark'>Retina Display</h5>
-                <h6 className='text-dark'>Dream Laptop</h6>
-                <p className='text-dark'>From $2999 or $36.82/mo. for 32 mo.*</p>
+                  <h5 className="text-dark">Retina Display</h5>
+                  <h6 className="text-dark">Dream Laptop</h6>
+                  <p className="text-dark">
+                    From $2999 or $36.82/mo. for 32 mo.*
+                  </p>
                 </div>
               </div>
             </div>
             <div className="col-3">
               <div className="hot-seller-card position-relative">
-              <img src={SubBanner3} className='img-fluid' alt="hot seller" />
+                <img src={SubBanner3} className="img-fluid" alt="hot seller" />
                 <div className="hot-seller-content position-absolute">
-                <h5 className='text-dark'>Latest phone tech</h5>
-                <h6 className='text-dark'>iPhone 13 or 14?</h6>
-                <p className='text-dark'>From $999 or $14.82/mo. for 24 mo.*</p>
+                  <h5 className="text-dark">Latest phone tech</h5>
+                  <h6 className="text-dark">iPhone 13 or 14?</h6>
+                  <p className="text-dark">
+                    From $999 or $14.82/mo. for 24 mo.*
+                  </p>
                 </div>
               </div>
             </div>
             <div className="col-3">
               <div className="hot-seller-card position-relative">
-              <img src={SubBanner4} className='img-fluid' alt="hot seller" />
+                <img src={SubBanner4} className="img-fluid" alt="hot seller" />
                 <div className="hot-seller-content position-absolute">
-                <h5 className='text-dark'>Home Audio</h5>
-                <h6 className='text-dark'>JBL x LBJ Collab</h6>
-                <p className='text-dark'>Lebron James will deliver this to your house.</p>
+                  <h5 className="text-dark">Home Audio</h5>
+                  <h6 className="text-dark">JBL x LBJ Collab</h6>
+                  <p className="text-dark">
+                    Lebron James will deliver this to your house.
+                  </p>
                 </div>
               </div>
             </div>
@@ -254,7 +321,6 @@ const Home = () => {
             <div className="col-12">
               <h3 className="section-heading">Specialty Items</h3>
             </div>
-
           </div>
           <div className="row">
             <SpecProduct />
@@ -268,9 +334,9 @@ const Home = () => {
       <section className="popular-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Our Most Popular Products</h3>
-          </div>
+            <div className="col-12">
+              <h3 className="section-heading">Our Most Popular Products</h3>
+            </div>
           </div>
           <div className="row">
             <ProductCard />
@@ -286,7 +352,7 @@ const Home = () => {
           <div className="row">
             <div className="col-12">
               <div className="marquee-inner-wrapper bg-white p-3">
-                <Marquee className='d-flex'>
+                <Marquee className="d-flex">
                   <div className="mx-4 w-25">
                     <img src={Brand1} alt="" />
                   </div>
@@ -321,28 +387,28 @@ const Home = () => {
       <section className="blog-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Our Latest Blogs</h3>
-          </div>
-          <div className="row">
-            <div className="col-3">
-              <BlogCard />
+            <div className="col-12">
+              <h3 className="section-heading">Our Latest Blogs</h3>
             </div>
-            <div className="col-3">
-              <BlogCard />
+            <div className="row">
+              <div className="col-3">
+                <BlogCard />
+              </div>
+              <div className="col-3">
+                <BlogCard />
+              </div>
+              <div className="col-3">
+                <BlogCard />
+              </div>
+              <div className="col-3">
+                <BlogCard />
+              </div>
             </div>
-            <div className="col-3">
-              <BlogCard />
-            </div>
-            <div className="col-3">
-              <BlogCard />
-            </div>
-          </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
