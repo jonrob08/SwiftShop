@@ -17,7 +17,8 @@ import {
   RefundPolicy,
   ShippingPolicy,
   TermsAndConditions,
-  Product
+  Product,
+  Cart
 } from './pages';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="product/:id" element={<Product />}/>
           <Route path="blog" element={<Blog />}/>
           <Route path="blog/:id" element={<Article />}/>
+          <Route path="cart" element={<Cart />}/>
           <Route path="contact" element={<Contact />}/>
           <Route path="compare" element={<Compare />}/>
           <Route path="wishlist" element={<Wishlist />}/>
