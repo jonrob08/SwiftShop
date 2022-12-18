@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 
 const Payment = () => {
-    const title = "Payment"
-    
+  const title = "Payment";
+
   return (
     <>
-        <Meta title={title} />
-        <BreadCrumb title={title} /> 
+      <Meta title={title} />
+      <BreadCrumb title={title} />
     </>
-  )
-}
+  );
+};
 
-export default Payment
+export default Payment;
