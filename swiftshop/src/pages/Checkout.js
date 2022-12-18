@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import {BiArrowBack} from 'react-icons/bi'
 
 const Checkout = () => {
 
@@ -16,7 +18,7 @@ const Checkout = () => {
                             >
                                 <ol className='breadcrumb'>
                                     <li className='breadcrumb-item'>
-                                        <a href="/cart">Cart </a>
+                                        <Link className='text-dark' to="/cart">Cart </Link>
                                     </li>
                                     <li className='breadcrumb-item active' aria-current="page">
                                         Information 
@@ -37,28 +39,38 @@ const Checkout = () => {
                             </p>
                             <form action="" className='d-flex gap-15 flex-wrap justify-content-between'>
                                 <div className='w-100'>
-                                    <select name="" className='form-control form-select' id=""></select>
+                                    <select name="" className='form-control form-select' id="">
+                                        <option value="" selected disabled>Select Country</option>
+                                    </select>
                                 </div>
                                 <div className='flex-grow-1'>
-                                    <input type="text" className="form-control" />
+                                    <input type="text" placeholder='First Name' className="form-control" />
                                 </div>
                                 <div className='flex-grow-1'>
-                                    <input type="text" className="form-control" />
+                                    <input type="text" placeholder='Last Name' className="form-control" />
                                 </div>
                                 <div className='w-100'>
-                                    <input type="text" className="form-control" />
+                                    <input type="text" placeholder='Address' className="form-control" />
                                 </div>
                                 <div className='w-100'>
-                                    <input type="text" className="form-control" />
+                                    <input type="text" placeholder='Apt, Suite #' className="form-control" />
                                 </div>
                                 <div className='flex-grow-1'>
-                                <input type="text" className="form-control" />
+                                <input type="text" placeholder='City' className="form-control" />
                                 </div>
                                 <div className='flex-grow-1'>
-                                <select name="" className='form-control form-select' id=""></select>
+                                <select name="" className='form-control form-select' id="">
+                                    <option value="" selected disabled>Select State</option>
+                                </select>
                                 </div>
                                 <div className='flex-grow-1'>
-                                <input type="text" className="form-control" />
+                                <input type="text" placeholder='Zip' className="form-control" />
+                                </div>
+                                <div className="w-100">
+                                    <div className="d-flex justify-content-between align-items-center">
+                                        <Link to="/cart" className='text-dark'><BiArrowBack className='me-2'/>Return to Cart</Link>
+                                        <Link to="/shipping" className='button'>Continue To Shipping</Link>
+                                    </div>
                                 </div>
                             </form>
                         </div>
