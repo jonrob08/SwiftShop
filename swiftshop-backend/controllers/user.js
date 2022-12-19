@@ -2,6 +2,7 @@ const User = require('../models/user')
 const asyncHandler = require('express-async-handler')
 const { generateToken } = require('../config/token')
 
+// Create a User
 const createUser = asyncHandler(async (req, res) => {
     const email = req.body.email
     const findUser = await User.findOne({ email: email })
@@ -13,6 +14,7 @@ const createUser = asyncHandler(async (req, res) => {
     }
 })
 
+// Login a User
 const loginUser = asyncHandler(async(req, res) => {
     const {email, password} = req.body;
     // check if user exists
@@ -32,4 +34,20 @@ const loginUser = asyncHandler(async(req, res) => {
     }
 })
 
-module.exports={ createUser, loginUser }
+// Get all Users
+const getAllUsers = asyncHandler(async (req, res) => {
+    try {
+        const getUsers = await User.find();
+        res.json(getUsers)
+    } catch (error) {
+        throw new Error(error)
+    }
+})
+
+// Get a single User
+const getUser = asyncHandler(async (req, res) => {
+    const { id } = req.params;
+    console.log(id);
+})
+
+module.exports={ createUser, loginUser, getAllUsers, getUser }
