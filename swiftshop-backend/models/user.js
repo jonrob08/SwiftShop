@@ -27,6 +27,10 @@ var userSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    role:{
+        type:String,
+        default: "user",
+    },
 });
 
 userSchema.pre('save', async function (next) {
@@ -34,7 +38,7 @@ userSchema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, salt)
 })
 
-userSchema.methods.isPasswordMatched = async function(enteredPassword) {
+userSchema.methods.isPasswordMatched = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password)
 }
 
