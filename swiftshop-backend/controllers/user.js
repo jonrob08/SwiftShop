@@ -60,10 +60,10 @@ const getUser = asyncHandler(async (req, res) => {
 // Update a User
 
 const updateUser = asyncHandler(async (req, res) => {
-    const { id } = req.params;
+    const { _id } = req.user;
     try {
         const updatedUser = await User.findByIdAndUpdate(
-            id,
+            _id,
             {
                 firstname: req?.body?.firstname,
                 lastname: req?.body?.lastname,
@@ -96,4 +96,13 @@ const deleteUser = asyncHandler(async (req, res) => {
     }
 })
 
-module.exports={ createUser, loginUser, getAllUsers, getUser, deleteUser, updateUser }
+// Block/Unblock a User from the site
+const blockUser = asyncHandler(async (req, res) => {
+
+})
+
+const unblockUser = asyncHandler(async (req, res) => {
+    
+})
+
+module.exports={ createUser, loginUser, getAllUsers, getUser, deleteUser, updateUser, blockUser, unblockUser }
