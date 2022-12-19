@@ -66,6 +66,30 @@ const refreshTokenHandler = asyncHandler(async (req, res) => {
     })
 })
 
+// Logout a User
+const logoutUser = asyncHandler(async (req, res) => {
+    const cookie = req.cookies
+    if (!cookie?.refreshToken) throw new Error('No Refresh Token Available in Cookies')
+    const refreshToken = cookie.refreshToken
+    const user = await User.findOne({ refreshToken })
+    if (!user) {
+        res.clearCookie('refreshToken', {
+            httpOnly: true,
+            secure: true
+        })
+        return res.sendStatus(204); // forbidden
+    }
+
+    await User.findOneAndUpdate(refreshToken, {
+        refreshToken: "",
+    })
+    res.clearCookie('refreshToken', {
+        httpOnly: true,
+        secure: true
+    })
+    res.sendStatus(204) // forbidden
+  });
+
 // Get all Users
 const getAllUsers = asyncHandler(async (req, res) => {
   try {
@@ -181,5 +205,6 @@ module.exports = {
   updateUser,
   blockUser,
   unblockUser,
-  refreshTokenHandler
+  refreshTokenHandler,
+  logoutUser
 };
