@@ -14,7 +14,13 @@ const createUser = asyncHandler(async (req, res) => {
 
 const loginUser = asyncHandler(async(req, res) => {
     const {email, password} = req.body;
-    console.log(email, password)
+    // check if user exists
+    const foundUser = await User.findOne({ email })
+    if (foundUser && await foundUser.isPasswordMatched(password)) {
+        res.json(foundUser)
+    } else {
+        throw new Error('Email or Password is incorrect')
+    }
 })
 
 module.exports={ createUser, loginUser }
