@@ -98,11 +98,43 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 // Block/Unblock a User from the site
 const blockUser = asyncHandler(async (req, res) => {
-
+    const { id } = req.params;
+    try {
+        const blockedUser = await User.findByIdAndUpdate(
+            id,
+            {
+                isBlocked: true,
+            },
+            {
+                new: true,
+            }
+            )
+        res.json({
+            message: `User ${blockedUser.firstname} has been blocked`
+        })
+    } catch (error) {
+        throw new Error(error)
+    }
 })
 
 const unblockUser = asyncHandler(async (req, res) => {
-    
+    const { id } = req.params;
+    try {
+        const unblockedUser = await User.findByIdAndUpdate(
+            id,
+            {
+                isBlocked: false,
+            },
+            {
+                new: true,
+            }
+            )
+        res.json({
+            message: `User ${unblockedUser.firstname} has been unblocked`
+        })
+    } catch (error) {
+        throw new Error(error)
+    }
 })
 
 module.exports={ createUser, loginUser, getAllUsers, getUser, deleteUser, updateUser, blockUser, unblockUser }
