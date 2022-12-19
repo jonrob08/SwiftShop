@@ -3,6 +3,7 @@ const asyncHandler = require("express-async-handler");
 const { generateToken } = require("../config/token");
 const validateMongoDbId = require("../utils/validateDatabaseId");
 const { generateRefreshToken } = require("../config/refreshToken");
+const jwt = require('jsonwebtoken')
 
 // Create a User
 const createUser = asyncHandler(async (req, res) => {
@@ -54,7 +55,15 @@ const refreshTokenHandler = asyncHandler(async (req, res) => {
     const refreshToken = cookie.refreshToken
     // console.log(refreshToken)
     const user = await User.findOne({ refreshToken })
-    res.json(user)
+    if(!user) throw new Error('No Refresh Token Available')
+    jwt.verify(refreshToken, process.env.JWT_SECRET, (err, decoded) => {
+        // console.log(decoded)
+        if (err || user.id !== decoded.id) {
+            throw new Error("There is an Issue with the Refresh Token")
+        }
+        const accessToken = generateToken(user?._id)
+        res.json({ accessToken })
+    })
 })
 
 // Get all Users
