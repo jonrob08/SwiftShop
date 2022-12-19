@@ -1,9 +1,12 @@
 const Product = require('../models/product')
-const asyncHandler = require('express-async-handler')
-
+const asyncHandler = require('express-async-handler');
+const { default: slugify } = require('slugify');
 
 // Create a New Product
 const createProduct = asyncHandler(async(req, res) => {
+    if (req.body.title){
+        req.body.slug = slugify(req.body.title)
+    }
     try {
       const newProduct = await Product.create(req.body);
       res.json({
@@ -38,20 +41,25 @@ const getProduct = asyncHandler(async (req, res) => {
 // Update A Product 
 const updateProduct = asyncHandler(async (req, res) => {
     try {
-      const updatedUser = await User.findByIdAndUpdate(
+      const updatedProduct = await Product.findByIdAndUpdate(
         _id,
         {
-          firstname: req?.body?.firstname,
-          lastname: req?.body?.lastname,
-          email: req?.body?.email,
-          mobile: req?.body?.mobile,
+          title: req?.body?.title,
+          slug: req?.body?.slug,
+          description: req?.body?.description,
+          price: req?.body?.price,
+          category: req?.body?.category,
+          brand: req?.body?.brand,
+          quantity: req?.body?.quantity,
+          sold: req?.body?.sold,
+          color: req?.body?.color,
         },
         {
           new: true,
         }
       );
       res.json({
-        updatedUser,
+        updatedProduct,
       });
     } catch (error) {
       throw new Error(error);
@@ -60,4 +68,4 @@ const updateProduct = asyncHandler(async (req, res) => {
 
 
 
-module.exports = { createProduct, getProduct, getAllProducts }
+module.exports = { createProduct, getProduct, getAllProducts, updateProduct }
