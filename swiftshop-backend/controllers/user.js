@@ -23,7 +23,7 @@ const loginUser = asyncHandler(async (req, res) => {
   if (foundUser && (await foundUser.isPasswordMatched(password))) {
     const refreshToken = await generateRefreshToken(foundUser?._id);
     const updateUser = await User.findByIdAndUpdate(
-      foundUser.id,
+      foundUser._id,
       {
         refreshToken: refreshToken,
       },
@@ -45,6 +45,17 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new Error("Email or Password is incorrect");
   }
 });
+
+// Handle Refresh Token
+const refreshTokenHandler = asyncHandler(async (req, res) => {
+    const cookie = req.cookies
+    // console.log(cookie)
+    if (!cookie?.refreshToken) throw new Error('No Refresh Token Available in Cookies')
+    const refreshToken = cookie.refreshToken
+    // console.log(refreshToken)
+    const user = await User.findOne({ refreshToken })
+    res.json(user)
+})
 
 // Get all Users
 const getAllUsers = asyncHandler(async (req, res) => {
@@ -161,4 +172,5 @@ module.exports = {
   updateUser,
   blockUser,
   unblockUser,
+  refreshTokenHandler
 };
