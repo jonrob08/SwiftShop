@@ -21,20 +21,33 @@ const createProduct = asyncHandler(async (req, res) => {
 // Get All Products
 const getAllProducts = asyncHandler(async (req, res) => {
   try {
-    // filtering
-    const queryObj = { ...req.query }
-    const excludeFields = ['page', 'sort', 'limit', 'fields']
-    excludeFields.forEach((element) => delete queryObj[element])
-    // console.log(queryObj, req.query)
-    let queryStr = JSON.stringify(queryObj)
+    // Filtering
+    const queryObj = { ...req.query };
+    const excludeFields = ["page", "sort", "limit", "fields"];
+    excludeFields.forEach((element) => delete queryObj[element]);
+    let queryStr = JSON.stringify(queryObj);
     // add a dollar sign to the query object in url using regex
-    queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, match => `$${match}`)
-    // const getProducts = await Product.find('category').equals(
-    //     req.query.category
-    // );
-    const query = Product.find(JSON.parse(queryStr))
-    // const getProducts = await Product.find(queryObj)
-    const getProducts = await query
+    queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (match) => `$${match}`);
+
+    let query = Product.find(JSON.parse(queryStr));
+
+    // Sorting
+    if (req.query.sort) {
+        const sortBy = req.query.sort.split(",").join(" ")
+        query = query.sort(sortBy)
+    } else {
+        query = query.sort("-createdAt")
+    }
+
+    // Limiting Fields
+    if (req.query.fields) {
+        const fields = req.query.fields.split(",").join(" ")
+        query = query.select(fields)
+    } else {
+        query = query.select('__v')
+    }
+
+    const getProducts = await query;
     res.json(getProducts);
   } catch (error) {
     throw new Error(error);
@@ -84,4 +97,10 @@ const deleteProduct = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createProduct, getProduct, getAllProducts, updateProduct, deleteProduct };
+module.exports = {
+  createProduct,
+  getProduct,
+  getAllProducts,
+  updateProduct,
+  deleteProduct,
+};
