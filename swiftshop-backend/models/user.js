@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt')
 
 // Declare the Schema of the Mongo model
 var userSchema = new mongoose.Schema({
@@ -28,5 +29,9 @@ var userSchema = new mongoose.Schema({
     },
 });
 
-//Export the model
+userSchema.pre('save', async function (next) {
+    const salt = bcrypt.genSaltSync(10);
+    this.password = await bcrypt.hash(this.password, salt)
+})
+
 module.exports = mongoose.model('User', userSchema);
