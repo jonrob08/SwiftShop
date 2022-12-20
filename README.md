@@ -33,7 +33,7 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
    Run these commands: 
     - npx create-react-app swiftshop --template redux
     - npm i react-icons react-router-dom react-fast-marquee react-rating-stars-component react-helmet react-image-zoom
-## What Are These Packages For? 
+## What Are These Front End Packages For? 
   1. React Icons is a library of icons that I can use for my app
     - https://react-icons.github.io/react-icons/
 
@@ -58,7 +58,25 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
   - mkdir config controller middleware models routes
   - touch index.js
   - npm i express express-async-handler mongoose bcrypt body-parser dotenv jsonwebtoken cookie-parser morgan slugify
-## Dev Notes
-### Bugs To Fix
-  1. On the login, signup, and forgot password page there is a horizontal scroll wheel. Double check CSS here. 
-  2. Broken images literally everywhere...
+
+## What Are These Server Packages For? 
+  1. Express is a package that helps you build web appns with Node.js. It makes it easier to handle HTTP requests and responses.
+    - https://expressjs.com/en/starter/basic-routing.html
+  2. Express async handler is middleware for express apps that allow the use of async functions as route handlers. The benefit I've seen with this package is that I don't have to manually wrap my async routes in a try catch in order to handle errors. It makes it look a bit cleaner as well.
+    - https://www.npmjs.com/package/express-async-handler
+  3. Mongoose is a schema based solution for modeling data, I'm using it to work with my MongoDB.
+    - https://mongoosejs.com/
+  4. Bcrypt is a password hashing package that is secure and widely used.
+    - https://www.npmjs.com/package/bcrypt
+  5. Body Parser is middleware that lets you parse request.bodies and make them available in the request object. So it saves time and mmakes the code easier to read. 
+    - https://www.npmjs.com/package/body-parser
+  6. "Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env."
+    - Direct quote: https://www.npmjs.com/package/dotenv
+  7. JSON Web Token is what I'm using to authenticate various things in my app by creating, utilizing, and refreshing tokens. For instance upon a successful authorized login, a token is generated for the user. The token gets sent to them, and now their entire session is verified and they can do things on the site that verified users can do.
+    - https://jwt.io/introduction
+  8. Cookie Parser is a a package that allows for parsing cookies that are sent in HTTP requests, and make them available to use in the request object. 
+    - https://www.npmjs.com/package/cookie-parser
+  9. Morgan is a package that allows for more detailed console information when you perform server requests 
+    - https://www.npmjs.com/package/morgan
+  10. Slugify is a package that helps with converting a sting into a URL slug. Example: Apple iPhone 13 becomes "/apple-iphone-13"
+    - https://www.npmjs.com/package/slugify

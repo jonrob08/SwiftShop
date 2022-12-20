@@ -1,7 +1,7 @@
 const Product = require("../models/product");
 const asyncHandler = require("express-async-handler");
 const { default: slugify } = require("slugify");
-const { query } = require("express");
+const validateMongoDbId = require("../utils/validateDatabaseId");
 
 // Create a New Product
 const createProduct = asyncHandler(async (req, res) => {
