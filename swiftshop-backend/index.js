@@ -8,6 +8,7 @@ const dotenv = require("dotenv").config();
 const PORT = process.env.PORT || 3002;
 const authRouter = require("./routes/auth");
 const productRouter = require("./routes/product");
+const blogRouter = require("./routes/blog");
 const app = express();
 
 dbConnect();
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/api/user", authRouter);
 app.use("/api/product", productRouter);
+app.use("/api/blog", blogRouter);
 
 app.use(notFound);
 app.use(errorHandler);
