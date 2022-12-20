@@ -21,14 +21,16 @@ const {
   getUserCart,
   emptyCart,
   applyCoupon,
+  createOrder,
 } = require("../controllers/user");
 const { authMiddleware, isAdmin } = require("../middleware/auth");
 
 router.post("/register", createUser);
-router.post("/cart/apply-coupon", authMiddleware, applyCoupon);
 router.post('/forgot-password', forgotPassword)
 router.put('/reset-password/:token', resetPassword)
 router.put("/password", authMiddleware, updatePassword);
+router.post("/cart/apply-coupon", authMiddleware, applyCoupon);
+router.post("/cart/cash-order", authMiddleware, createOrder);
 router.post("/login", loginUser);
 router.post("/admin-login", loginAdmin);
 router.post("/logout", logoutUser);
