@@ -19,5 +19,4 @@ router.get("/:id", getBlog);
 router.get("/", getAllBlogs);
 router.delete("/:id", authMiddleware, isAdmin, deleteBlog);
 
-
 module.exports = router;

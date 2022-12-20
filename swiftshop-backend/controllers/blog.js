@@ -40,7 +40,9 @@ const getAllBlogs = asyncHandler(async (req, res) => {
 const getBlog = asyncHandler(async (req, res) => {
   const { id } = req.params;
   try {
-    const getBlog = await Blog.findById(id);
+    const getBlog = await Blog.findById(id)
+      .populate("likes")
+      .populate("dislikes");
     await Blog.findByIdAndUpdate(
       id,
       {
@@ -70,23 +72,24 @@ const deleteBlog = asyncHandler(async (req, res) => {
 
 // Like A Blog
 const likeBlog = asyncHandler(async (req, res) => {
-    console.log('started')
+  console.log("started");
   const { blogId } = req.body;
-  console.log(blogId)
+  console.log(blogId);
   validateMongoDbId(blogId);
 
   // Find the blog
   const blog = await Blog.findById(blogId);
-  console.log('Done 1', blog)
-  console.log('Done 2', blogId)
+  console.log("Done 1", blog);
+  console.log("Done 2", blogId);
   // Find the logged in user
   const loginUserId = req?.user?._id;
   // Check if user has liked the blog
   const isLiked = blog?.isLiked;
-  console.log(isLiked)
+  console.log(isLiked);
   // Check if the user has disliked the blog
   const alreadyDisliked = blog?.dislikes?.find(
-    (userId) => userId?.toString() === loginUserId?.toString());
+    (userId) => userId?.toString() === loginUserId?.toString()
+  );
   if (alreadyDisliked) {
     const blog = await Blog.findByIdAndUpdate(
       blogId,
@@ -98,31 +101,31 @@ const likeBlog = asyncHandler(async (req, res) => {
       },
       { new: true }
     );
-    res.json(blog)
+    res.json(blog);
   }
   if (isLiked) {
     const blog = await Blog.findByIdAndUpdate(
-        blogId,
-        {
-          // remove user from the likes array
-          $pull: { likes: loginUserId },
-          isLiked: false,
-        },
-        { new: true }
-      );
-      res.json(blog)
+      blogId,
+      {
+        // remove user from the likes array
+        $pull: { likes: loginUserId },
+        isLiked: false,
+      },
+      { new: true }
+    );
+    res.json(blog);
   } else {
     const blog = await Blog.findByIdAndUpdate(
-        blogId,
-        {
-          // pull is an update operation that adds values to the field array
-          // add user to the likes array
-          $push: { likes: loginUserId },
-          isLiked: true,
-        },
-        { new: true }
-      );
-      res.json(blog)
+      blogId,
+      {
+        // pull is an update operation that adds values to the field array
+        // add user to the likes array
+        $push: { likes: loginUserId },
+        isLiked: true,
+      },
+      { new: true }
+    );
+    res.json(blog);
   }
 });
 
@@ -139,7 +142,8 @@ const dislikeBlog = asyncHandler(async (req, res) => {
   const isDisliked = blog?.isDisliked;
   // Check if the user has liked the blog
   const alreadyLiked = blog?.likes?.find(
-    (userId) => userId?.toString() === loginUserId?.toString());
+    (userId) => userId?.toString() === loginUserId?.toString()
+  );
   if (alreadyLiked) {
     const blog = await Blog.findByIdAndUpdate(
       blogId,
@@ -151,32 +155,40 @@ const dislikeBlog = asyncHandler(async (req, res) => {
       },
       { new: true }
     );
-    res.json(blog)
+    res.json(blog);
   }
   if (isDisliked) {
     const blog = await Blog.findByIdAndUpdate(
-        blogId,
-        {
-          // remove user from the dislikes array
-          $pull: { dislikes: loginUserId },
-          isDisliked: false,
-        },
-        { new: true }
-      );
-      res.json(blog)
+      blogId,
+      {
+        // remove user from the dislikes array
+        $pull: { dislikes: loginUserId },
+        isDisliked: false,
+      },
+      { new: true }
+    );
+    res.json(blog);
   } else {
     const blog = await Blog.findByIdAndUpdate(
-        blogId,
-        {
-          // pull is an update operation that adds values to the field array
-          // add user to the likes array
-          $push: { dislikes: loginUserId },
-          isDisliked: true,
-        },
-        { new: true }
-      );
-      res.json(blog)
+      blogId,
+      {
+        // pull is an update operation that adds values to the field array
+        // add user to the likes array
+        $push: { dislikes: loginUserId },
+        isDisliked: true,
+      },
+      { new: true }
+    );
+    res.json(blog);
   }
 });
 
-module.exports = { createBlog, updateBlog, getBlog, getAllBlogs, deleteBlog, likeBlog, dislikeBlog };
+module.exports = {
+  createBlog,
+  updateBlog,
+  getBlog,
+  getAllBlogs,
+  deleteBlog,
+  likeBlog,
+  dislikeBlog,
+};
