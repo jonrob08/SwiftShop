@@ -82,3 +82,10 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
     - https://www.npmjs.com/package/slugify
   11. Nodemailer is a package that provides a simple API for sending emails using various transport methods. It also supports attachments and more advanced features. 
     - https://nodemailer.com/usage/
+  12. Multer is middleware for handling file uploads within forms, we'll be using it to upload images to cloudinary.
+    - https://www.npmjs.com/package/multer
+  13. Cloudinary is a cloud-based media storage platform, it's mainly used for images and videos, which is what I'll be using it for. 
+    - https://cloudinary.com/
+  14. Sharp is an image manipulation package that allows for simple resizing and cropping. 
+    - https://www.npmjs.com/package/sharp
+
