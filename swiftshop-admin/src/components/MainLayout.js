@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 import {
   MenuFoldOutlined,
@@ -9,10 +9,11 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
-import { AiOutlineDashboard, AiOutlineShoppingCart, AiOutlineUserAdd, AiOutlineBgColors, AiOutlineOrderedList, AiOutlineQuestionCircle } from "react-icons/ai";
+import { AiOutlineDashboard, AiOutlineShoppingCart, AiOutlineUserAdd, AiOutlineBgColors, AiOutlineOrderedList, AiOutlineQuestionCircle, AiOutlineNotification } from "react-icons/ai";
 import { SiBrandfolder, SiMicrodotblog } from 'react-icons/si'
 import { BiCategoryAlt } from 'react-icons/bi'
 import { FaBlogger } from 'react-icons/fa'
+import { GiMechaMask } from 'react-icons/gi'
 
 const { Header, Sider, Content } = Layout;
 
@@ -139,6 +140,7 @@ const MainLayout = () => {
       </Sider>
       <Layout className="site-layout">
         <Header
+        className="d-flex justify-content-between ps-1 pe-5"
           style={{
             padding: 0,
             background: "white",
@@ -151,6 +153,21 @@ const MainLayout = () => {
               onClick: () => setCollapsed(!collapsed),
             }
           )}
+          <div className="d-flex gap-4 align-items-center">
+            <div className="position-relative">
+              <AiOutlineNotification />
+              <span className="badge bg-warning rounded-circle p-1 position-absolute">3</span>
+            </div>
+            <div className="d-flex gap-3 align-items-center">
+              <div>
+                <img width={32} height={32} src="https://stroyka-admin.html.themeforest.scompiler.ru/variants/ltr/images/customers/customer-4-64x64.jpg" alt="" />
+              </div>
+              <div>
+                <h5 className="text-dark">Jon</h5>
+                <p>jonrob08@gmail.com</p>
+              </div>
+            </div>
+          </div>
         </Header>
         <Content
           style={{
@@ -160,7 +177,7 @@ const MainLayout = () => {
             background: "white",
           }}
         >
-          Content
+          <Outlet />
         </Content>
       </Layout>
     </Layout>
