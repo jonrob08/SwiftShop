@@ -49,6 +49,37 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
+// Login Admin
+const loginAdmin = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+  const foundAdmin = await User.findOne({ email });
+  if (foundAdmin.role !== 'admin') throw new Error("Not Authorized")
+  if (foundAdmin && (await foundAdmin.isPasswordMatched(password))) {
+    const refreshToken = await generateRefreshToken(foundAdmin?._id);
+    const updateUser = await User.findByIdAndUpdate(
+      foundAdmin._id,
+      {
+        refreshToken: refreshToken,
+      },
+      { new: true }
+    );
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      maxAge: 72 * 60 * 60 * 1000,
+    });
+    res.json({
+      _id: foundAdmin?._id,
+      firstname: foundAdmin?.firstname,
+      lastname: foundAdmin?.lastname,
+      email: foundAdmin?.email,
+      mobile: foundAdmin?.mobile,
+      token: generateToken(foundAdmin?._id),
+    });
+  } else {
+    throw new Error("Email or Password is incorrect");
+  }
+});
+
 // Handle Refresh Token
 const refreshTokenHandler = asyncHandler(async (req, res) => {
   const cookie = req.cookies;
@@ -94,6 +125,27 @@ const logoutUser = asyncHandler(async (req, res) => {
   res.sendStatus(204); // forbidden
 });
 
+// Save User Address
+const saveAddress = asyncHandler(async (req, res) => {
+  const { _id } = req.user
+  validateMongoDbId(_id)
+
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      _id,
+      {
+        address: req?.body?.address,
+      },
+      {
+        new: true,
+      }
+    );
+    res.json(updatedUser);
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
 // Get all Users
 const getAllUsers = asyncHandler(async (req, res) => {
   try {
@@ -118,23 +170,11 @@ const getUser = asyncHandler(async (req, res) => {
 });
 
 // Update a User
-
 const updateUser = asyncHandler(async (req, res) => {
   const { _id } = req.user;
   validateMongoDbId(_id);
   try {
-    const updatedUser = await User.findByIdAndUpdate(
-      _id,
-      {
-        firstname: req?.body?.firstname,
-        lastname: req?.body?.lastname,
-        email: req?.body?.email,
-        mobile: req?.body?.mobile,
-      },
-      {
-        new: true,
-      }
-    );
+    
     res.json({
       updatedUser,
     });
@@ -260,6 +300,19 @@ const resetPassword = asyncHandler(async (req, res) => {
   res.json(user)
 });
 
+// Get User Wishlist
+const getWishlist = asyncHandler(async (req, res) => {
+  const { _id } = req.user;
+  try {
+    const findUser = await User.findById(_id).populate('wishlist');
+    res.json({
+      findUser,
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
 module.exports = {
   createUser,
   loginUser,
@@ -273,5 +326,8 @@ module.exports = {
   logoutUser,
   updatePassword,
   forgotPassword,
-  resetPassword
+  resetPassword,
+  loginAdmin,
+  getWishlist,
+  saveAddress
 };
