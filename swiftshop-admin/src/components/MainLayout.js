@@ -24,7 +24,10 @@ const MainLayout = () => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
-          <h2 className="text-white fs-5 text-center py-3 mb-0">SwiftShop Admin</h2>
+          <h2 className="text-white fs-5 text-center py-3 mb-0">
+            <span className="sm-logo">SS</span>
+            <span className="lg-logo">SwiftShop</span>
+          </h2>
         </div>
         <Menu
           theme="dark"
