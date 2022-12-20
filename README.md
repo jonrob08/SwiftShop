@@ -89,3 +89,5 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
   14. Sharp is an image manipulation package that allows for simple resizing and cropping. 
     - https://www.npmjs.com/package/sharp
 
+# backlog bugs
+- image upload for blog is sending image to local product folder 
