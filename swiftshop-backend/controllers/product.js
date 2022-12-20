@@ -44,8 +44,20 @@ const getAllProducts = asyncHandler(async (req, res) => {
         const fields = req.query.fields.split(",").join(" ")
         query = query.select(fields)
     } else {
-        query = query.select('__v')
+        query = query.select('-__v')
     }
+
+    // Pagination
+    const page = req.query.page;
+    const limit = req.query.limit;
+    const skip = (page - 1) * limit
+    query = query.skip(skip).limit(limit)
+    if (req.query.page) {
+        const productCount = await Product.countDocuments()
+        if (skip >= productCount) throw new Error("This page does not exist")
+    }
+
+    console.log(page, limit, skip)
 
     const getProducts = await query;
     res.json(getProducts);
