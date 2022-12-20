@@ -9,9 +9,10 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
-import { AiOutlineDashboard, AiOutlineShoppingCart, AiOutlineUserAdd, AiOutlineBgColors } from "react-icons/ai";
-import { SiBrandfolder } from 'react-icons/si'
+import { AiOutlineDashboard, AiOutlineShoppingCart, AiOutlineUserAdd, AiOutlineBgColors, AiOutlineOrderedList, AiOutlineQuestionCircle } from "react-icons/ai";
+import { SiBrandfolder, SiMicrodotblog } from 'react-icons/si'
 import { BiCategoryAlt } from 'react-icons/bi'
+import { FaBlogger } from 'react-icons/fa'
 
 const { Header, Sider, Content } = Layout;
 
@@ -22,7 +23,9 @@ const MainLayout = () => {
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="logo" />
+        <div className="logo">
+          <h2 className="text-white fs-5 text-center py-3 mb-0">SwiftShop Admin</h2>
+        </div>
         <Menu
           theme="dark"
           mode="inline"
@@ -81,15 +84,52 @@ const MainLayout = () => {
                 },
                 {
                   key: "color",
-                  icon: <BiCategoryAlt className="fs-4" />,
+                  icon: <AiOutlineBgColors className="fs-4" />,
                   label: "color",
                 },
                 {
                   key: "color-list",
-                  icon: <BiCategoryAlt className="fs-4" />,
+                  icon: <AiOutlineBgColors className="fs-4" />,
                   label: "Color List",
                 },
               ],
+            },
+            {
+              key: "orders",
+              icon: <AiOutlineOrderedList className="fs-4" />,
+              label: "Orders",
+            },
+            {
+              key: "blog",
+              icon: <SiMicrodotblog className="fs-4" />,
+              label: "Blog",
+              children: [
+                {
+                  key: "blog-list",
+                  icon: <FaBlogger className="fs-4" />,
+                  label: "Blog List",
+                },
+                {
+                  key: "blog",
+                  icon: <FaBlogger className="fs-4" />,
+                  label: "Add Blog",
+                },
+                {
+                  key: "blog-category",
+                  icon: <FaBlogger className="fs-4" />,
+                  label: "Add Blog Category",
+                },
+                {
+                  key: "blog-category-list",
+                  icon: <FaBlogger className="fs-4" />,
+                  label: "Blog Category List",
+                },
+              ]
+            },
+            {
+              key: "enquiries",
+              icon: <AiOutlineQuestionCircle className="fs-4" />,
+              label: "Enquiries",
             },
           ]}
         />
