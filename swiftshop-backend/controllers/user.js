@@ -2,6 +2,7 @@ const User = require("../models/user");
 const Product = require("../models/product");
 const Cart = require("../models/cart");
 const Coupon = require("../models/coupon")
+const Order = require("../models/order")
 const asyncHandler = require("express-async-handler");
 const { generateToken } = require("../config/token");
 const validateMongoDbId = require("../utils/validateDatabaseId");
@@ -9,7 +10,6 @@ const { generateRefreshToken } = require("../config/refreshToken");
 const jwt = require("jsonwebtoken");
 const sendEmail = require("./email");
 const crypto = require("crypto");
-const { validate } = require("../models/user");
 
 // Create a User
 const createUser = asyncHandler(async (req, res) => {
@@ -382,7 +382,7 @@ const emptyCart = asyncHandler(async (req, res) => {
 
 // Apply Coupon
 const applyCoupon = asyncHandler(async (req, res) => {
-  const {coupon} = req.body;
+  const { coupon } = req.body;
   const { _id } = req.user;
   validateMongoDbId(_id)
   console.log(coupon)
@@ -392,7 +392,7 @@ const applyCoupon = asyncHandler(async (req, res) => {
       throw new Error("Invalid Coupon Code")
     }
     const user = await User.findOne({ _id })
-    let { cartTotal } = await Cart.findOne({
+    let cartTotal = await Cart.findOne({
       orderby: user._id,
     }).populate("products.product")
     let totalAfterDiscount = (
@@ -400,6 +400,18 @@ const applyCoupon = asyncHandler(async (req, res) => {
     ).toFixed(2)
     await Cart.findOneAndUpdate({orderby: user._id}, {totalAfterDiscount}, {new: true})
     res.json(totalAfterDiscount)
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+// Create Order
+const createOrder = asyncHandler(async (req, res) => {
+  const { _id } = req.user;
+  validateMongoDbId(_id)
+  try {
+    const cart = await Cart.findOne({orderby: _id}).populate("products.product")
+    res.json(cart);
   } catch (error) {
     throw new Error(error);
   }
