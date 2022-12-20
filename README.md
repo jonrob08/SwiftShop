@@ -57,7 +57,7 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
   - npm init -y
   - mkdir config controller middleware models routes
   - touch index.js
-  - npm i express express-async-handler mongoose bcrypt body-parser dotenv jsonwebtoken cookie-parser morgan slugify
+  - npm i express express-async-handler mongoose bcrypt body-parser dotenv jsonwebtoken cookie-parser morgan slugify nodemailer
 
 ## What Are These Server Packages For? 
   1. Express is a package that helps you build web appns with Node.js. It makes it easier to handle HTTP requests and responses.
@@ -80,3 +80,5 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
     - https://www.npmjs.com/package/morgan
   10. Slugify is a package that helps with converting a sting into a URL slug. Example: Apple iPhone 13 becomes "/apple-iphone-13"
     - https://www.npmjs.com/package/slugify
+  11. Nodemailer is a package that provides a simple API for sending emails using various transport methods. It also supports attachments and more advanced features. 
+    - https://nodemailer.com/usage/
