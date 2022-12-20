@@ -1,5 +1,5 @@
 const cloudinary = require("cloudinary");
-const { response } = require("express");
+
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.API_KEY,
