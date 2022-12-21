@@ -85,3 +85,7 @@ main::-webkit-scrollbar {
   top: 8px;
   right: -6px;
 }
+
+.quill {
+  background-color: white;
+}

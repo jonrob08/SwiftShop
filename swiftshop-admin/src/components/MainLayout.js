@@ -104,7 +104,7 @@ const MainLayout = () => {
               label: "Orders",
             },
             {
-              key: "blog",
+              key: "blogs",
               icon: <SiMicrodotblog className="fs-4" />,
               label: "Blog",
               children: [
