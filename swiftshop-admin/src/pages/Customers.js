@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useDispatch } from 'react'
 import { Table } from 'antd';
+import { getUsers } from '../features/customers/customerSlice';
 const columns = [
     {
       title: 'Serial#',
@@ -29,6 +30,10 @@ const columns = [
   }
 
 const Customers = () => {
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(getUsers())
+  }, [])
   return (
     <div>
         <h3 className="mb-4">Customers</h3>
