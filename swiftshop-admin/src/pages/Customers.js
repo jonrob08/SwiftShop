@@ -1,4 +1,5 @@
-import React, { useEffect, useDispatch } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { Table } from 'antd';
 import { getUsers } from '../features/customers/customerSlice';
 const columns = [

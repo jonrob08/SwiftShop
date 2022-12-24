@@ -11,7 +11,7 @@ export const getUsers = createAsyncThunk('customer/get-customers', async (thunkA
 })
 
 const initialState = {
-    customer: [],
+    customers: [],
     isError: false,
     isLoading: false,
     isSuccess: false,
@@ -29,12 +29,14 @@ export const customerSlice = createSlice({
             state.isLoading = false
             state.isError = false
             state.isSuccess = true
-            state.message = action.payload
+            state.message = "Success"
+            state.customers = action.payload
         }).addCase(getUsers.rejected, (state, action) => {
             state.isLoading = false
             state.isError = true
             state.isSuccess = false
-            state.user = null
+            state.message = action.error
+
         })
     }
 })
