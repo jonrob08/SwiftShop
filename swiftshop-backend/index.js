@@ -3,6 +3,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const morgan = require("morgan");
 const dbConnect = require("./config/dbConnect");
+const cors = require("cors")
 const { notFound, errorHandler } = require("./middleware/errorHandler");
 const dotenv = require("dotenv").config();
 const PORT = process.env.PORT || 3002;
@@ -17,6 +18,7 @@ const app = express();
 
 dbConnect();
 app.use(morgan("dev"));
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());

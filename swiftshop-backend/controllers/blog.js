@@ -73,21 +73,13 @@ const deleteBlog = asyncHandler(async (req, res) => {
 
 // Like A Blog
 const likeBlog = asyncHandler(async (req, res) => {
-  console.log("started");
   const { blogId } = req.body;
-  console.log(blogId);
   validateMongoDbId(blogId);
 
   // Find the blog
   const blog = await Blog.findById(blogId);
-  console.log("Done 1", blog);
-  console.log("Done 2", blogId);
-  // Find the logged in user
   const loginUserId = req?.user?._id;
-  // Check if user has liked the blog
   const isLiked = blog?.isLiked;
-  console.log(isLiked);
-  // Check if the user has disliked the blog
   const alreadyDisliked = blog?.dislikes?.find(
     (userId) => userId?.toString() === loginUserId?.toString()
   );
@@ -95,8 +87,6 @@ const likeBlog = asyncHandler(async (req, res) => {
     const blog = await Blog.findByIdAndUpdate(
       blogId,
       {
-        // pull is an update operation that removes all instances of the value from the field
-        // remove user from the dislikes array
         $pull: { dislikes: loginUserId },
         isDisliked: false,
       },

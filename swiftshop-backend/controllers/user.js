@@ -88,15 +88,12 @@ const loginAdmin = asyncHandler(async (req, res) => {
 // Handle Refresh Token
 const refreshTokenHandler = asyncHandler(async (req, res) => {
   const cookie = req.cookies;
-  // console.log(cookie)
   if (!cookie?.refreshToken)
     throw new Error("No Refresh Token Available in Cookies");
   const refreshToken = cookie.refreshToken;
-  // console.log(refreshToken)
   const user = await User.findOne({ refreshToken });
   if (!user) throw new Error("No Refresh Token Available");
   jwt.verify(refreshToken, process.env.JWT_SECRET, (err, decoded) => {
-    // console.log(decoded)
     if (err || user.id !== decoded.id) {
       throw new Error("There is an Issue with the Refresh Token");
     }
@@ -322,7 +319,6 @@ const userCart = asyncHandler(async (req, res) => {
   const { cart } = req.body;
   const { _id } = req.user;
   validateMongoDbId(_id);
-  console.log(_id);
   try {
     let products = [];
     const user = await User.findById(_id);
@@ -343,7 +339,6 @@ const userCart = asyncHandler(async (req, res) => {
     for (let i = 0; i < products.length; i++) {
       cartTotal = cartTotal + products[i].price * products[i].count;
     }
-    // console.log(products, cartTotal)
     let newCart = await new Cart({
       products,
       cartTotal,
@@ -388,22 +383,18 @@ const applyCoupon = asyncHandler(async (req, res) => {
   const { coupon } = req.body;
   const { _id } = req.user;
   validateMongoDbId(_id);
-  // console.log(coupon);
   const validCoupon = await Coupon.findOne({ name: coupon });
   if (validCoupon === null) {
     throw new Error("Invalid Coupon Code");
   }
   const user = await User.findOne({ _id });
-  console.log("here's the user", user);
   let { cartTotal } = await Cart.findOne({
     orderby: user._id,
   }).populate("products.product");
-  // console.log("cart totla",cartTotal)
   let totalAfterDiscount = (
     cartTotal -
     (cartTotal * validCoupon.discount) / 100
   ).toFixed(2);
-  // console.log("cart totla after d",totalAfterDiscount)
   await Cart.findOneAndUpdate(
     { orderby: user._id },
     { totalAfterDiscount },
