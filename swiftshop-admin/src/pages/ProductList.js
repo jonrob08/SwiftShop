@@ -34,7 +34,7 @@ const columns = [
     dataIndex: "description",
   },
   {
-    title: "Price",
+    title: "Price ($)",
     dataIndex: "price",
     sorter: (a, b) => a.price - b.price,
   },
@@ -81,7 +81,7 @@ const ProductList = () => {
       title: productState[i].title,
       slug: productState[i].slug,
       description: productState[i].description,
-      price: `$ ${productState[i].price}`,
+      price: productState[i].price,
       category: productState[i].category,
       brand: productState[i].brand,
       quantity: productState[i].quantity,

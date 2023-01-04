@@ -1,55 +1,92 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CustomInput from "../components/CustomInput";
-import { useFormik } from "formik"
-import {useDispatch, useSelector} from 'react-redux'
-import { login } from "../features/auth/authSlice"
+import * as yup from "yup";
+import { useFormik } from "formik";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../features/auth/authSlice";
+
+let schema = yup.object().shape({
+  email: yup
+    .string()
+    .email("Email should be valid")
+    .required("Email is Required"),
+  password: yup.string().required("Password is Required"),
+});
 
 const Login = () => {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-      onSubmit: (values) => {
-        dispatch(login(values))
-      },
+    validationSchema: schema,
+    onSubmit: (values) => {
+      dispatch(login(values));
+    },
   });
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth
-    )
+
+  const authState = useSelector(
+    (state) => state
+  );
+
+  const { user, isLoading, isError, isSuccess, message } = authState.auth
+
   useEffect(() => {
-    if(isSuccess) {
-      navigate('admin')
+    if (isSuccess) {
+     navigate("admin");
     } else {
-      navigate('')
+      navigate("");
     }
-  }, [user, isLoading, isError, isSuccess, message  ])
+  }, [user, isError, isSuccess, isLoading]);
   return (
-    <div className="py-5" style={{ background: "#ffd333", minHeight: "100vh"}}>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <div className="py-5" style={{ background: "#ffd333", minHeight: "100vh" }}>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="my-5 w-25 bg-white rounded-3 mx-auto p-3">
-        <h3 className="text-center">Login</h3>
+        <h3 className="text-center title">Login</h3>
         <p className="text-center">Login to your account to continue</p>
         <div className="error text-center">
           {message.message == "Rejected" ? "You are not an Admin" : ""}
         </div>
         <form action="" onSubmit={formik.handleSubmit}>
-          <CustomInput type="text" name="email" label="Email Address" id="email" val={formik.values.email} onCh={formik.handleChange("email")}/>
-          <CustomInput type="password" name="password" label="Password" id="pass" val={formik.values.password} onCh={formik.handleChange("password")} />
+          <CustomInput
+            type="text"
+            name="email"
+            label="Email Address"
+            id="email"
+            onCh={formik.handleChange("email")}
+            onBlr={formik.handleBlur("email")}
+            val={formik.values.email}
+          />
+          <div className="error mt-2">
+            {formik.touched.email && formik.errors.email}
+          </div>
+          <CustomInput
+            type="password"
+            name="password"
+            label="Password"
+            id="pass"
+            onCh={formik.handleChange("password")}
+            onBlr={formik.handleBlur("password")}
+            val={formik.values.password}
+          />
+          <div className="error mt-2">
+            {formik.touched.password && formik.errors.password}
+          </div>
           <div className="mb-3 text-end">
             <Link to="forgot-password">Forgot Password?</Link>
           </div>
-          <button to='/admin'
+          <button
+            to="/admin"
             className="border-0 px-3 py-2 text-white fw-bold w-100 text-center text-decoration-none fs-5"
             style={{ background: "#ffd333" }}
             type="submit"

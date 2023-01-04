@@ -91,3 +91,4 @@ https://www.figma.com/file/xyr0O8AXE4CA1b17AYjMMp/Untitled?node-id=1%3A310&t=JDP
 
 # backlog bugs
 - image upload for blog is sending image to local product folder 
+- "No token in header" error when I try and pull brand data with auth middleware (temporarily removing auth checks in the route to continue building out admin panel)
