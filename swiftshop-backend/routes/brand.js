@@ -7,6 +7,6 @@ router.get('/:id', authMiddleware, isAdmin, getBrand)
 router.post('/', authMiddleware, isAdmin, createBrand)
 router.put('/:id', authMiddleware, isAdmin, updateBrand)
 router.delete('/:id', authMiddleware, isAdmin, deleteBrand)
-router.get('/', getAllBrands)
+router.get('/', authMiddleware, isAdmin, getAllBrands)
 
 module.exports = router
