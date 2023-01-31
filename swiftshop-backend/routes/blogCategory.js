@@ -3,7 +3,7 @@ const { createCategory, updateCategory, deleteCategory, getCategory, getAllCateg
 const { authMiddleware, isAdmin } = require("../middleware/auth")
 const router = express.Router()
 
-router.get('/', authMiddleware, isAdmin, getAllCategories)
+router.get('/', getAllCategories)
 router.get('/:id', authMiddleware, isAdmin, getCategory)
 router.post('/', authMiddleware, isAdmin, createCategory)
 router.put('/:id', authMiddleware, isAdmin, updateCategory)
