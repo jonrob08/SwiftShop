@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Table } from "antd";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
-import { getProducts } from "../features/product/items/productSlice";
+import { getProducts } from "../features/product/productSlice";
 import { Link } from "react-router-dom";
 
 const columns = [

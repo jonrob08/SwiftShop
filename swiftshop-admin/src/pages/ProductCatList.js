@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { getProductCategories } from '../features/product/categories/productCategorySlice';
+import { getProductCategories } from '../features/product/productCategorySlice';
 
 const columns = [
     {
