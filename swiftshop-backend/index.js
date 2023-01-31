@@ -14,6 +14,7 @@ const pCategoryRouter = require("./routes/productCategory");
 const bCategoryRouter = require("./routes/blogCategory");
 const brandRouter = require("./routes/brand");
 const couponRouter = require("./routes/coupon");
+const colorRouter = require("./routes/color");
 const app = express();
 
 dbConnect();
@@ -29,7 +30,8 @@ app.use("/api/product-category", pCategoryRouter);
 app.use("/api/blog-category", bCategoryRouter);
 app.use("/api/brand", brandRouter);
 app.use("/api/coupon", couponRouter);
-
+app.use("/api/color", colorRouter);
+ 
 app.use(notFound);
 app.use(errorHandler);
 
