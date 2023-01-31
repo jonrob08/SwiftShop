@@ -1,34 +1,52 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import { Table } from 'antd';
+import { useDispatch, useSelector } from "react-redux";
+import { BiEdit } from "react-icons/bi";
+import { AiFillDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { getBlogCategories } from "../features/blog/blogCategorySlice";
+
 const columns = [
     {
       title: 'Serial#',
       dataIndex: 'key',
     },
     {
-      title: 'Name',
-      dataIndex: 'name',
+      title: 'Title',
+      dataIndex: 'title',
     },
     {
-      title: 'Product',
-      dataIndex: 'product',
-    },
-    {
-      title: 'Status',
-      dataIndex: 'status',
+      title: 'Action',
+      dataIndex: 'action',
     },
   ];
-  const data1 = [];
-  for (let i = 0; i < 46; i++) {
-    data1.push({
-      key: i,
-      name: `Edward King ${i}`,
-      age: 32,
-      address: `London, Park Lane no. ${i}`,
-    });
-  }
 
 const BlogCatList = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBlogCategories());
+  }, []);
+
+  const blogCategoryState = useSelector((state) => state.blogCategory.blogCategories);
+  const data1 = [];
+
+  for (let i = 0; i < blogCategoryState.length; i++) {
+    data1.push({
+      key: i + 1,
+      _id: blogCategoryState[i]._id,
+      title: blogCategoryState[i].title,
+      action: (
+        <>
+          <Link className="fs-3 text-warning" to="/">
+            <BiEdit />
+          </Link>
+          <Link className="ms-3 fs-3 text-danger" to="/">
+            <AiFillDelete />
+          </Link>
+        </>
+      ),
+    });
+  }
   return (
     <div>
         <h3 className="mb-4">Blog Categories</h3>
